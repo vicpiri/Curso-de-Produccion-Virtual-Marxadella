@@ -6,6 +6,8 @@
   --apagado: #96a0b5;
   --acento: #4da3ff;
   --acento-suave: #1d2f45;
+  --mini: 260px;      /* ancho del visor pequeño */
+  --yt-ancho: 1280px; /* tamaño real del iframe de YouTube, luego se encoge */
 }
 
 * { box-sizing: border-box; }
@@ -155,7 +157,7 @@ main { flex: 1; display: flex; min-height: 0; }
   position: absolute;
   right: 14px;
   bottom: 14px;
-  width: 260px;
+  width: var(--mini);
   border: 1px solid var(--borde);
   border-radius: 8px;
   overflow: hidden;
@@ -200,6 +202,26 @@ main { flex: 1; display: flex; min-height: 0; }
 .caja-video .yt iframe { display: block; width: 100%; height: 100%; border: 0; }
 .caja-video.grande:has(.yt) { width: 100%; height: 100%; }
 .caja-video.grande .yt { height: 100%; aspect-ratio: auto; }
+
+/* YouTube decide la calidad por el tamaño del reproductor, y a una miniatura de
+   260 px le sirve 240p. El problema es que esa decisión se le queda pegada: al
+   ampliarla después sigue en 240p, y con controls:0 no hay menú donde corregirlo.
+   Así que el iframe de la miniatura mide de verdad --yt-ancho y es el navegador
+   quien lo encoge: YouTube ve siempre un reproductor grande, pide calidad alta
+   desde el principio y al cambiar de visor ya está nítido. Cuesta ancho de banda
+   en el visor pequeño, que aquí importa menos que leer la pantalla. */
+.caja-video:not(.grande) {
+  width: var(--mini);
+  height: calc(var(--mini) * 9 / 16);
+  overflow: hidden;
+}
+.caja-video:not(.grande) .yt {
+  width: var(--yt-ancho);
+  height: calc(var(--yt-ancho) * 9 / 16);
+  aspect-ratio: auto;
+  transform: scale(calc(var(--mini) / var(--yt-ancho)));
+  transform-origin: top left;
+}
 
 /* Capa por encima del vídeo que recoge los clics (ver app.js). */
 .capa { z-index: 1; cursor: pointer; }
