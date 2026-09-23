@@ -1,0 +1,45 @@
+{
+ "sesiones": [
+  {"n": 1, "capitulos": [
+     {"t": 0, "titulo": "Montaje y calibración física del rig de cámara", "resumen": "Se monta la cámara en la zapata, se ajustan los encoders de foco y zoom con llaves Allen y se corrige su alineación."},
+     {"t": 1365, "titulo": "Normalización de encoders y curva de foco", "resumen": "Se resetea a cero el encoder Tilta/Antilente y se comprueba el foco contra objetos de InfinitySet a 0,5, 1, 2 y 4 metros."},
+     {"t": 2011, "titulo": "Comprobación del foco con un actor y offset de rotación", "resumen": "Se verifica que el foco coincide con un actor a distancias reales y se ajusta el offset de rotación del mundo en Unreal."},
+     {"t": 2275, "titulo": "Calibración del bokeh con el aperture multiplicador", "resumen": "Se explica el slider de aperture en Camera Setup como multiplicador de desenfoque y se iguala el bokeh real con el virtual."},
+     {"t": 2886, "titulo": "Corrección del bug de Post Process Volume (vectores RGB)", "resumen": "Se arregla el envío roto de exposición, contraste y saturación creando un Custom Event y un Make Vector4 en el Level Blueprint."},
+     {"t": 3465, "titulo": "Composición del suelo con IA: segmentación de chroma", "resumen": "Se explica cómo componer el suelo pisado por el actor segmentando el chroma con IA, perdiendo las sombras del set extension."},
+     {"t": 3627, "titulo": "Offset del mundo Unreal respecto al cero de Infinity", "resumen": "Se copian posición y rotación y se explica el concepto de offset para hacer coincidir el cero de Unreal con el de Infinity."},
+     {"t": 3778, "titulo": "Configuración de Crosspoint 1 y 2 para proyección XR", "resumen": "Se crea el Crosspoint 1 (Track Free, sin distorsión ni lens center) y el Crosspoint 2 (Track XR) con la geometría del video wall."},
+     {"t": 4199, "titulo": "Ruteo del Display Out y salida al video wall", "resumen": "Se asigna el Display Out del Crosspoint 2 a un pipe y se corrige un defocus residual que desenfocaba la geometría proyectada."},
+     {"t": 4446, "titulo": "Crosspoint 6 tipo AR: cámara más set extension", "resumen": "Se configura el Crosspoint 6 como AR combinando el tracking 2 con la entrada de cámara y se rutea el Display Out final."},
+     {"t": 4692, "titulo": "Set extension y holdout vinculado al offset de Unreal", "resumen": "Se asigna la geometría de set extension, se activa el holdout y se vincula su posición/rotación al offset con copy/paste bind."},
+     {"t": 5160, "titulo": "Extra render y creación del plano BrainstormTransfer", "resumen": "Se sube el extra render para evitar huecos negros y se crea en Unreal un plano con material de transfer para medir el delay."},
+     {"t": 6243, "titulo": "Ajuste fino de los delays hasta sincronizar la imagen", "resumen": "Se ajustan el video delay del input y el delay del set extension hasta que ambas mitades del plano cambien a la vez (12 frames)."},
+     {"t": 6710, "titulo": "Migración de la escena a un proyecto Unreal limpio", "resumen": "Al fallar el alfa del holdout se migra la escena a un proyecto Unreal nuevo con settings por defecto para aislar el problema."},
+     {"t": 7178, "titulo": "Revisión de la zapata y del juego mecánico del soporte", "resumen": "Se desmonta el soporte para comprobar si tiene holgura mecánica que pueda estar afectando a la precisión del tracking."},
+     {"t": 7878, "titulo": "Ajuste de offsets, FOV y marcado del punto cero real", "resumen": "Se recalculan offsets de posición, altura y FOV con la lente Canon Prime 24 y se marca en el suelo el verdadero punto cero."},
+     {"t": 8699, "titulo": "Reajuste final de offsets y comparación con la caja", "resumen": "Con el nuevo cero se reajustan pan, tilt y offsets de altura, mejorando notablemente la precisión antes de ir a almorzar."}
+  ]},
+  {"n": 2, "capitulos": [
+     {"t": 25, "titulo": "Recalibración de ejes del tracker con láser", "resumen": "Ajustan con láser la posición del tracker InfinitySet, corrigiendo una desviación de varios centímetros en los ejes."},
+     {"t": 321, "titulo": "Preset AR Canon 24mm y trazado del eje X=0 con láser", "resumen": "Guardan el preset de cámara AR Canon Prime 24 y marcan con láser y cinta la línea del eje X=0 y una escuadra de 90 grados."},
+     {"t": 867, "titulo": "Escaneo 3D de la geometría corregida (Scaniverse)", "resumen": "Escanean con el iPhone y Scaniverse la geometría física ya corregida y exportan el modelo en OBJ para enviarlo por email."},
+     {"t": 1276, "titulo": "Importación en Maya y alineación al punto cero", "resumen": "Cargan en Maya el escaneo nuevo junto a la geometría antigua y la desplazan y centran sobre el eje de coordenadas."},
+     {"t": 1694, "titulo": "Freeze transformations y modelado del set extension", "resumen": "Congelan transformaciones, rotan 90 grados por convención de Brainstorm y extruyen la geometría para crear el set extension."},
+     {"t": 1964, "titulo": "Corte del suelo y coordenadas UV de gradiente", "resumen": "Recortan y aplanan el suelo y generan coordenadas de textura automáticas para aplicar el mismo gradiente que el video wall."},
+     {"t": 2656, "titulo": "Reimportación de geometría y edición del holdout blueprint", "resumen": "Copian los nuevos meshes de suelo y pared del video wall, editan el blueprint holdout y renombran el blueprint en Unreal."},
+     {"t": 2980, "titulo": "Prueba en escena XR ruinas: deriva del tracking", "resumen": "Instalan el camera setup, cargan la escena de las ruinas y comprueban que el eje del tracking sigue derivando pese a los offsets."},
+     {"t": 3668, "titulo": "Video wall desactualizado y desajuste de FOV/escala", "resumen": "Descubren que el input 2 seguía usando la geometría vieja y sospechan además un desajuste de field of view/escala en el AR."},
+     {"t": 4340, "titulo": "Pruebas de calibración con un segundo objeto de referencia", "resumen": "Añaden una segunda caja de referencia y comparan el AR con el clon para intentar aislar el origen del desplazamiento del eje."},
+     {"t": 5151, "titulo": "Reexportación de geometría V2 y ajuste del gradiente", "resumen": "Exportan una nueva versión de la geometría, corrigen la proporción del gradiente del suelo y la reimportan en Unreal."},
+     {"t": 5958, "titulo": "Simulación en Crosspoint 7: geometría vs tracking", "resumen": "Crean una simulación filtrada por crosspoint ID que demuestra que la geometría encaja perfecta y que el fallo está en el tracking."},
+     {"t": 6302, "titulo": "Organización del form en rollouts: geometría, delays, color", "resumen": "Ordenan el form de Infinity agrupando en rollouts la geometría, los delays de tracking y la corrección de color/exposición."},
+     {"t": 6799, "titulo": "Título de texto en Crosspoint 8 con fuentes 2D", "resumen": "Crean un texto en el Crosspoint 8 con fuente texturizada de alta resolución, caja de texto con crop y shrink, y fondo con plano."},
+     {"t": 7513, "titulo": "Mezcla en Crosspoint 12 y animaciones de entrada/salida", "resumen": "Componen el programa final apilando capas en el Crosspoint 12 y crean timelines personalizados de entrada y salida del título."},
+     {"t": 8001, "titulo": "Logo de Sketchfab: importación, timer y giro animado", "resumen": "Descargan un logo de Sketchfab, lo importan como FBX y lo hacen girar continuamente mediante un timer vinculado por bind."},
+     {"t": 9246, "titulo": "Infinity vs Aston y ajuste del tracking delay en el museo", "resumen": "Explican que Aston gestiona composiciones gráficas más complejas que Infinity y afinan el tracking delay en la escena del museo."},
+     {"t": 9748, "titulo": "Ampliación del suelo transitable y extra render", "resumen": "Alargan el suelo hacia delante para dar más espacio de movimiento y suben el extra render para evitar bandas negras al moverse."},
+     {"t": 10078, "titulo": "Columna adicional y orden de transparencias (DOF)", "resumen": "Escanean una columna para disimular costuras y corrigen el orden de renderizado before/after DOF en materiales con transparencia (agua)."},
+     {"t": 10875, "titulo": "Migración final del museo a la geometría V3 corregida", "resumen": "Duplican el proyecto del museo, importan la geometría V3 en Unreal, actualizan el holdout y alinean la altura del suelo."}
+  ]}
+ ]
+}

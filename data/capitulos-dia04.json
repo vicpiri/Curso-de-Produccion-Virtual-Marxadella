@@ -1,0 +1,33 @@
+{
+ "sesiones": [
+  {"n": 1, "capitulos": [
+     {"t": 0, "titulo": "Calibración de la caja de referencia y offsets del tracking", "resumen": "Miden una caja de referencia y ajustan los offsets del tracking Antilatency para corregir la deriva del punto cero."},
+     {"t": 1356, "titulo": "Ajuste del genlock a 25 fps y de las resoluciones de vídeo", "resumen": "Configuran el genlock a 25 fps y acaban trabajando en HD porque la tarjeta Blackmagic no permite mezclar resoluciones."},
+     {"t": 2862, "titulo": "Escaneo LiDAR de la caja y alineación de la geometría en Maya", "resumen": "Escanean la caja con LiDAR y Scaniverse, y alinean la geometría exportada al punto cero del mundo en Maya."},
+     {"t": 5069, "titulo": "Proyecto Unreal y tipos de cross point XR (activo/pasivo)", "resumen": "Descargan un proyecto de Unreal y explican la diferencia entre un XR activo (pantalla plana) y uno pasivo (curvo)."},
+     {"t": 5299, "titulo": "Preparación del mapa en Unreal: exposición y offset del mundo", "resumen": "Cambian el layout de Unreal, desactivan la autoexposición y crean un plano de referencia para el punto cero del mapa."},
+     {"t": 6074, "titulo": "Montaje del XR pasivo: geometría, distorsión y dos trackings", "resumen": "Configuran el cross point XR pasivo, desactivan lens center y distorsión, y clonan un segundo tracking sin distorsión."},
+     {"t": 6577, "titulo": "Salidas por pipe y resolución del video wall en Blackmagic", "resumen": "Asignan cada salida de vídeo a su pipe y prueban resoluciones HD y 4K para el video wall y el programa."},
+     {"t": 7438, "titulo": "Construcción del set extension: extrusión en Maya", "resumen": "Duplican y extruyen en Maya la geometría del video wall hacia arriba, abajo y los laterales para el set extension."},
+     {"t": 8082, "titulo": "Alpha holdout de Unreal: el agujero y su activación", "resumen": "Explican el alpha holdout como el agujero para ver la cámara real y lo activan en preferencias de Unreal (SM6, float RGBA)."},
+     {"t": 8937, "titulo": "Alineación del holdout con el offset de calibración", "resumen": "Ajustan posición y rotación del blueprint holdout para que coincida con el offset de la calibración de cámara."}
+  ]},
+  {"n": 2, "capitulos": [
+     {"t": 0, "titulo": "Primer resultado del set extension con el holdout activo", "resumen": "Comprueban que el agujero del holdout funciona y ven por primera vez a una persona integrada con el set extension."},
+     {"t": 523, "titulo": "Ajuste de iluminación y panel 'form' para los delays", "resumen": "Bajan la luz que lava el video wall, ajustan iris y ganancia de la cámara, y empiezan un panel 'form' con los delays."},
+     {"t": 1380, "titulo": "Sincronización de delays de vídeo y set extension", "resumen": "Usan un vídeo partido entre video wall y set extension para ajustar frame a frame los delays hasta que encajan."},
+     {"t": 1897, "titulo": "Control de la exposición de Unreal vía Level Blueprint", "resumen": "Crean en el Level Blueprint de Unreal un evento que expone la exposición para controlarla en directo desde Brainstorm."},
+     {"t": 2528, "titulo": "Ajuste de color e ISO de cámara frente al video wall", "resumen": "Agrupan los editores de color y ajustan el ISO y el diafragma de la cámara para igualar los tonos con el video wall."},
+     {"t": 3520, "titulo": "Vinculación del holdout y props en primer plano", "resumen": "Vinculan la posición del holdout al offset del mundo de Unreal y añaden un carro para probar foco y parallax."},
+     {"t": 5625, "titulo": "Ajuste fino de lens center y delay de tracking", "resumen": "Ajustan el offset del lens center y el delay de tracking para reducir la deriva del punto cero al mover la cámara."}
+  ]},
+  {"n": 3, "capitulos": [
+     {"t": 0, "titulo": "Elección de escenarios en Unreal y plan para mañana", "resumen": "Prueban varios mapas de Unreal para elegir escenario y deciden dedicar la sesión siguiente a chroma y realidad aumentada."},
+     {"t": 698, "titulo": "Migración del alpha holdout a un nuevo proyecto", "resumen": "Repiten en un proyecto de museo los ajustes de alpha holdout, alpha output, SM6 y float RGBA para el set extension."},
+     {"t": 1484, "titulo": "Ajuste del offset de delay de tracking", "resumen": "Prueban distintos offsets de delay de tracking moviendo la cámara, sin eliminar del todo la deriva del tracking."},
+     {"t": 1996, "titulo": "Bibliotecas de assets de Unreal y geometría con IA", "resumen": "Recorren bibliotecas de assets como Fab y ScansFactory y comentan IA que genera geometría 3D a partir de una foto."},
+     {"t": 3373, "titulo": "Repetición del holdout en un nuevo mapa (Electric Dreams)", "resumen": "Repiten la configuración del holdout en un nuevo mapa y alinean el suelo virtual con el punto cero del video wall."},
+     {"t": 4775, "titulo": "Depuración de un fallo del gradiente del holdout", "resumen": "Investigan por qué ha dejado de verse el degradado del holdout sin encontrar la causa antes de terminar la sesión."}
+  ]}
+ ]
+}

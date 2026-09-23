@@ -1,0 +1,32 @@
+{
+ "sesiones": [
+  {"n": 1, "capitulos": [
+     {"t": 0, "titulo": "Estándares 3D: FBX, materiales PBR y mapeado UV", "resumen": "Evolución de OBJ a FBX, canales de materiales PBR, mapeado UV y primera pantalla de bienvenida de InfinitySet."},
+     {"t": 989, "titulo": "Listas de InfinitySet, estadísticas y salida de vídeo", "resumen": "Iconos de listas de objetos y materiales, overlay de estadísticas en tiempo real, y el Display Port como salida real."},
+     {"t": 1729, "titulo": "Primitivas, matriz de transformación y consola Python", "resumen": "Creación de primitivas, propiedades de matriz y pivote, y consola Python con itemSet, itemGet e itemGo."},
+     {"t": 2376, "titulo": "Textos, curvas Bézier, partículas, clones y StormLogic", "resumen": "Objetos de texto, curvas Bézier, partículas, clones e instancias, y comparación de interfaz con Aston y su StormLogic."},
+     {"t": 3295, "titulo": "Navegación de cámara y manipulación con gizmos (W/E/R)", "resumen": "Controles de órbita, zoom y paneo de cámara, atajos W/E/R, y gestión del pivote para rotar y escalar bien."},
+     {"t": 4110, "titulo": "Materiales por cara, canal alfa y escalas métricas", "resumen": "Materiales por cada cara de un objeto, canal alfa, unidades métricas al importar FBX y tangentes para shaders."},
+     {"t": 5725, "titulo": "Librería del Browser, FBX externo y gestión de proyectos", "resumen": "Uso del Browser para fondos y objetos, importación de un FBX externo, versiones y exportación de proyectos."}
+  ]},
+  {"n": 2, "capitulos": [
+     {"t": 0, "titulo": "Librería de assets: backgrounds, stands y pointers", "resumen": "Presentación de la librería de objetos de InfinitySet y cómo cargar backgrounds, stands y pointers en el proyecto."},
+     {"t": 323, "titulo": "Video Setup vs proyecto: override de tracking y FOV", "resumen": "Diferencia entre la configuración global del Video Setup y la del proyecto, con override del field of view de la cámara."},
+     {"t": 697, "titulo": "Escenas con form, custom folder y clipping para XR", "resumen": "Uso del form y custom folder de una escena y de un plano de clipping para integrar el fondo con pantallas LED en XR."},
+     {"t": 1243, "titulo": "Timers y producciones: timeline in/out, self/brother", "resumen": "Timers para animaciones cíclicas y producciones de entrada/salida, self in/out y brother in/out de una composición."},
+     {"t": 2299, "titulo": "Tab Custom: keyframes, transiciones y curvas", "resumen": "El tab Custom permite crear keyframes de escala/desplazamiento, añadir transiciones y aplicar curvas con la tecla U."},
+     {"t": 4028, "titulo": "Producciones, acciones, Presenter, OnDemand y Unreal", "resumen": "Producciones con estado final, acciones, efecto Presenter para automatizar in/out, y diferencias entre OnDemand y Unreal."},
+     {"t": 5706, "titulo": "Botón Library, efectos, object coordinates y reflector", "resumen": "Atajo del botón Library, efectos según el objeto, cómo enganchar un objeto a pantalla y el efecto reflector con PBR."}
+  ]},
+  {"n": 3, "capitulos": [
+     {"t": 0, "titulo": "Escenas, grupos de librería y texturas por arrastre", "resumen": "Explica cómo se organiza el proyecto en escenas y grupos de librería, y cómo aplicar una textura arrastrándola."},
+     {"t": 427, "titulo": "Timers, binds GoTo/FreeBind y datos con LLString", "resumen": "Anima una rotación infinita con timer y bind GoTo, y vincula un texto a una tabla LLString con offset de rotación."},
+     {"t": 1788, "titulo": "Fuentes texturizadas, filled y extruidas; justificación", "resumen": "Compara fuentes texturizadas, filled y extruidas, y explica cómo justificar el texto respecto a su caja o línea."},
+     {"t": 2471, "titulo": "Z-fighting, bind de fondo al texto y lower third", "resumen": "Evita el z-fighting, crea un bind para ajustar el fondo al texto, y monta un lower third con producciones in/out."},
+     {"t": 3633, "titulo": "Break at End y Object Coordinates para anclar a pantalla", "resumen": "Explica el Break at End para animaciones infinitas y el efecto Object Coordinates para fijar gráficos a la cámara."},
+     {"t": 4415, "titulo": "Reutilizar gráficos, forms y buenas prácticas", "resumen": "Guarda gráficos como sets reutilizables, crea un form para el operador, y recomienda mostrar solo lo necesario."},
+     {"t": 5718, "titulo": "Materiales 2D/3D, sombras, cubemaps y PBR Environment", "resumen": "Diferencia entre materiales 2D y 3D, sombras, cubemaps para reflexiones metálicas y un HDR como PBR Environment."},
+     {"t": 6966, "titulo": "Importación FBX, triangulación y mapeado UV", "resumen": "Repasa el importador FBX, la triangulación obligatoria y el mapeado UV, con el problema de texturas repetidas."}
+  ]}
+ ]
+}

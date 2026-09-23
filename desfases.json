@@ -1,0 +1,98 @@
+[
+ {
+  "dia": "Día 04",
+  "sesion": 1,
+  "obs": "2026-07-21 08-30-34",
+  "camara": "Brainstorm_dia4_1",
+  "desfase_s": 5.35,
+  "confianza": 0.819
+ },
+ {
+  "dia": "Día 04",
+  "sesion": 2,
+  "obs": "2026-07-21 11-46-21",
+  "camara": "Brainstorm_dia4_2",
+  "desfase_s": -0.21,
+  "confianza": 0.823
+ },
+ {
+  "dia": "Día 04",
+  "sesion": 3,
+  "obs": "2026-07-21 13-30-23",
+  "camara": "Brainstorm_dia4_3",
+  "desfase_s": 15.71,
+  "confianza": 0.821
+ },
+ {
+  "dia": "Día 05",
+  "sesion": 1,
+  "obs": "2026-07-22 08-15-08",
+  "camara": "Brainstorm_dia5_1",
+  "desfase_s": 99.94,
+  "confianza": 0.862
+ },
+ {
+  "dia": "Día 05",
+  "sesion": 2,
+  "obs": "2026-07-22 10-28-51",
+  "camara": "Brainstorm_dia5_2",
+  "desfase_s": -19.97,
+  "confianza": 0.854
+ },
+ {
+  "dia": "Día 05",
+  "sesion": 3,
+  "obs": "2026-07-22 11-30-56",
+  "camara": "Brainstorm_dia5_3",
+  "desfase_s": -2.86,
+  "confianza": 0.806
+ },
+ {
+  "dia": "Día 05",
+  "sesion": 4,
+  "obs": "2026-07-22 11-54-44",
+  "camara": "Brainstorm_dia5_4",
+  "desfase_s": -9.3,
+  "confianza": 0.793
+ },
+ {
+  "dia": "Día 05",
+  "sesion": 4,
+  "obs": "2026-07-22 11-54-44",
+  "camara": "Brainstorm_dia5_5",
+  "desfase_s": 10158.32,
+  "confianza": 0.733
+ },
+ {
+  "dia": "Día 06",
+  "sesion": 1,
+  "obs": "2026-07-23 08-33-43",
+  "camara": "Brainstorm_dia6_1",
+  "desfase_s": 8.6,
+  "confianza": 0.912
+ },
+ {
+  "dia": "Día 06",
+  "sesion": 1,
+  "obs": "2026-07-23 08-33-43",
+  "camara": "Brainstorm_dia6_2",
+  "desfase_s": 6840.6,
+  "confianza": 0.568
+ },
+ {
+  "dia": "Día 06",
+  "sesion": 1,
+  "obs": "2026-07-23 08-33-43",
+  "camara": "Brainstorm_dia6_3",
+  "desfase_s": 8930.53,
+  "confianza": 0.737
+ },
+ {
+  "dia": "Día 06",
+  "sesion": 2,
+  "obs": "2026-07-23 11-44-23",
+  "camara": "Brainstorm_dia6_4",
+  "desfase_s": -42.72,
+  "confianza": 0.842
+ }
+]

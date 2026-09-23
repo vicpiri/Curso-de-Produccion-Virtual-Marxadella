@@ -1,0 +1,36 @@
+{
+ "sesiones": [
+  {"n": 1, "capitulos": [
+     {"t": 0, "titulo": "Presentación del curso y licencias de Brainstorm Suite", "resumen": "Óscar presenta el curso, las apps de la Suite (InfinitySet, Aston, Unreal Engine) y cómo instalar y gestionar la licencia."},
+     {"t": 939, "titulo": "Sincronización SDI/NDI y la tarjeta Blackmagic", "resumen": "Se explican los límites de sincronía del NDI frente al SDI y se recorren físicamente los conectores de la tarjeta Blackmagic."},
+     {"t": 1714, "titulo": "Configuración de la entrada de vídeo en Video Setup", "resumen": "Se configura la entrada de la cámara PTZ: tarjeta, card, conector, formato, rango de color y prueba con el botón test."},
+     {"t": 2430, "titulo": "Entrada NDI, IP de la PTZ e identificador de red", "resumen": "Se añade una segunda entrada NDI de prueba, se ajusta la IP de la cámara PTZ y se fija su identificador en la red."},
+     {"t": 3870, "titulo": "Configuración de las salidas y los pipes de InfinitySet", "resumen": "Se configuran las salidas de programa y video wall y se explica el enrutamiento de señales mediante pipes."},
+     {"t": 4309, "titulo": "Salida Fill+Key y flujo de rotulación en televisión", "resumen": "Se configura una salida Fill y Key con la tarjeta Blackmagic y se explica su uso habitual en rotulación de televisión."},
+     {"t": 5227, "titulo": "GPUs duales y límites de cámaras según la producción", "resumen": "Se habla de tarjetas gráficas duales, RTX frente a Quadro, y cuántas cámaras admite cada tipo de producción."},
+     {"t": 5980, "titulo": "Ejemplos de video wall, stacks y sincronismo físico", "resumen": "Se analizan ejemplos reales como Mandalorian, el concepto de stack para componer imagen y el cableado del genlock."}
+  ]},
+  {"n": 2, "capitulos": [
+     {"t": 9, "titulo": "Camera Setup: interfaz y gestión de presets", "resumen": "Se presenta la interfaz de Camera Setup y por qué cada combinación de cámara y lente necesita su propio preset."},
+     {"t": 269, "titulo": "Tracking Antilatency: barras, sensor y encoders", "resumen": "Se explica el tracking óptico de barras en el techo, el sensor de la cámara, la VirtualBox y los encoders de zoom y foco."},
+     {"t": 890, "titulo": "Precisión del tracking y chroma key frente a video wall", "resumen": "Se comparan chroma y video wall (reflejos, extensión de set, multicámara) y los límites del área de cobertura del tracking."},
+     {"t": 1505, "titulo": "El anillo de foco electrónico y el limitador Tilta", "resumen": "Se explica el problema del anillo de foco infinito de la óptica y su solución con un follow focus limitador Tilta."},
+     {"t": 1846, "titulo": "Interfaz web de la VirtualBox y primer preset", "resumen": "Se recorre la web vpbox.local (genlock, posición, ejes) y se crea el preset con entrada de vídeo, cámara y protocolo FreeD."},
+     {"t": 2788, "titulo": "Recepción de tracking por UDP, columnas de datos y fase", "resumen": "Se configura el puerto UDP para recibir el tracking, se mapean las columnas de datos y se ajusta la fase para evitar tirones."},
+     {"t": 3634, "titulo": "Normalización de la lente y el lens center", "resumen": "Se normalizan las curvas de zoom y foco y se calcula el centro óptico (lens center) con un zoom virtual de referencia."},
+     {"t": 5056, "titulo": "Calibración automática del FOV con el patrón de ajedrez", "resumen": "Se fotografía un tablero de ajedrez rígido desde muchas posiciones para que el sistema calcule el field of view de la lente."},
+     {"t": 5901, "titulo": "Revisión del error de calibración y aplicación del FOV", "resumen": "Se revisan las fotos y su margen de error, se descartan las peores y se aplica el FOV calculado a la curva de zoom."},
+     {"t": 6456, "titulo": "Offset del sensor (CCD) y calibración de la curva de zoom", "resumen": "Se mide el desplazamiento del sensor de tracking respecto al centro de la lente y se calibra el zoom con un objeto de referencia."}
+  ]},
+  {"n": 3, "capitulos": [
+     {"t": 27, "titulo": "Calibración de la curva de zoom y el punto nodal", "resumen": "Se ajusta iterativamente la curva de zoom comparando una caja real y virtual, corrigiendo también el punto nodal de la lente."},
+     {"t": 1554, "titulo": "Niveles de foco: varias curvas de zoom según la distancia", "resumen": "Se explica que cada distancia de enfoque necesita su propia curva de zoom y cómo afecta esto a un transfoco."},
+     {"t": 2092, "titulo": "Visualización del punto nodal y curva de foco", "resumen": "Se visualiza cómo se desplaza virtualmente el punto nodal al hacer zoom y se empieza la calibración de la curva de foco."}
+  ]},
+  {"n": 4, "capitulos": [
+     {"t": 3, "titulo": "Curva de foco mediante distancias medidas", "resumen": "Se completa la curva de foco creando keyframes en distancias medidas físicamente, de 0,7 metros hasta el infinito."},
+     {"t": 697, "titulo": "Ajuste de la distorsión de la lente (K1 y K2)", "resumen": "Se ajustan los parámetros de distorsión K1 y K2 comparando una caja real y virtual en las esquinas del encuadre."},
+     {"t": 1185, "titulo": "Delay de vídeo y tracking, y cierre de la calibración", "resumen": "Se ajusta el delay de vídeo y tracking por eje para eliminar tirones, y se guarda el preset final de la cámara."}
+  ]}
+ ]
+}

@@ -1,0 +1,350 @@
+:root {
+  --fondo: #10131a;
+  --panel: #171b24;
+  --borde: #262c38;
+  --texto: #e6e9ef;
+  --apagado: #96a0b5;
+  --acento: #4da3ff;
+  --acento-suave: #1d2f45;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font: 15px/1.5 system-ui, "Segoe UI", sans-serif;
+  height: 100vh;
+  height: 100dvh;  /* en móvil descuenta las barras del navegador */
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--borde);
+  background: var(--panel);
+}
+
+/* El título cede espacio: si no, un nombre largo deja sin sitio a los días. */
+h1 {
+  font-size: 15px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  flex-shrink: 1;
+  max-width: 28ch;
+}
+
+#dias { display: flex; gap: 6px; overflow-x: auto; flex: 1; min-width: 0; }
+
+.origen { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+#origen {
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  background: var(--fondo);
+  color: var(--texto);
+  padding: 4px 8px;
+  font: inherit;
+}
+
+.dia {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  padding: 5px 11px;
+  border: 1px solid var(--borde);
+  border-radius: 7px;
+  background: transparent;
+  color: var(--apagado);
+  cursor: pointer;
+  white-space: nowrap;
+  font: inherit;
+}
+.dia strong { font-size: 13px; color: var(--texto); }
+.dia span { font-size: 11px; }
+.dia:hover { border-color: var(--acento); }
+.dia.activo { background: var(--acento-suave); border-color: var(--acento); }
+
+main { flex: 1; display: flex; min-height: 0; }
+
+/* ---- índice ---- */
+
+#panel {
+  width: 340px;
+  flex-shrink: 0;
+  border-right: 1px solid var(--borde);
+  background: var(--panel);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+#buscar {
+  margin: 10px;
+  padding: 7px 10px;
+  border: 1px solid var(--borde);
+  border-radius: 7px;
+  background: var(--fondo);
+  color: var(--texto);
+  font: inherit;
+}
+
+#indice { overflow-y: auto; padding: 0 10px 20px; }
+
+.cabecera-sesion {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--acento-suave);
+  color: var(--apagado);
+  font: 600 12px/1.4 inherit;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  cursor: pointer;
+}
+.cabecera-sesion.activa { color: var(--acento); }
+
+.capitulo {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 2px 8px;
+  width: 100%;
+  padding: 7px 8px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--texto);
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+.capitulo:hover { background: #1e2431; }
+.capitulo.sonando { background: var(--acento-suave); box-shadow: inset 2px 0 0 var(--acento); }
+.capitulo .tiempo { color: var(--acento); font-variant-numeric: tabular-nums; font-size: 13px; }
+.capitulo .titulo { font-size: 14px; }
+.capitulo .resumen { grid-column: 2; color: var(--apagado); font-size: 12px; }
+.vacio { color: var(--apagado); font-size: 13px; padding: 6px 8px; }
+
+/* ---- vídeo ---- */
+
+#escenario { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+
+#videos {
+  flex: 1;
+  position: relative;
+  background: #000;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.caja-video {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 260px;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 6px 20px #0008;
+  cursor: pointer;
+  z-index: 2;
+}
+.caja-video:nth-of-type(3) { right: 288px; }
+.caja-video:nth-of-type(4) { right: 562px; }
+
+.caja-video:not(.grande):hover { border-color: var(--acento); }
+
+/* La miniatura tiene siempre proporción 16:9, aunque el vídeo aún no haya cargado. */
+.caja-video:not(.grande) { aspect-ratio: 16 / 9; }
+.caja-video:not(.grande) video { width: 100%; height: 100%; object-fit: contain; }
+
+.caja-video.grande {
+  position: static;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  cursor: default;
+  z-index: 1;
+}
+
+/* Los tramos de una misma cámara comparten celda: solo se ve el que toca. */
+.caja-video { display: grid; }
+.caja-video > * { grid-area: 1 / 1; }
+
+.caja-video video { display: block; width: 100%; max-height: 100%; }
+.caja-video.grande video { width: auto; max-width: 100%; max-height: 100%; margin: auto; }
+
+/* Un tramo fuera de su intervalo no se muestra; queda debajo el aviso. */
+.segmento.fuera-de-tramo { visibility: hidden; }
+
+/* Reproductor de YouTube: el iframe no tiene tamaño propio, se lo da el contenedor. */
+.caja-video .yt { width: 100%; aspect-ratio: 16 / 9; }
+.caja-video .yt iframe { display: block; width: 100%; height: 100%; border: 0; }
+.caja-video.grande:has(.yt) { width: 100%; height: 100%; }
+.caja-video.grande .yt { height: 100%; aspect-ratio: auto; }
+
+/* Capa por encima del vídeo que recoge los clics (ver app.js). */
+.capa { z-index: 1; cursor: pointer; }
+.caja-video .etiqueta { z-index: 2; }
+
+.hueco {
+  display: grid;
+  place-items: center;
+  min-height: 90px;
+  padding: 10px;
+  color: var(--apagado);
+  font-size: 12px;
+  text-align: center;
+}
+.caja-video.grande .hueco { font-size: 15px; }
+
+.etiqueta {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  padding: 2px 8px;
+  border: 0;
+  border-radius: 20px;
+  background: #000a;
+  color: #fff;
+  font: 11px inherit;
+  cursor: pointer;
+}
+.caja-video.grande .etiqueta { background: #0006; }
+
+#videos.una-sola .caja-video .etiqueta { display: none; }
+
+/* ---- controles ---- */
+
+#controles {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 14px;
+  border-top: 1px solid var(--borde);
+  background: var(--panel);
+}
+
+#controles button, #velocidad {
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  background: var(--fondo);
+  color: var(--texto);
+  padding: 5px 10px;
+  font: inherit;
+  cursor: pointer;
+}
+#controles button:hover { border-color: var(--acento); }
+#reproducir { min-width: 42px; font-size: 15px; }
+
+#barra { flex: 1; accent-color: var(--acento); }
+#tiempo { font-variant-numeric: tabular-nums; color: var(--apagado); white-space: nowrap; }
+
+.etiqueta-control { color: var(--apagado); font-size: 12px; }
+
+#audio { display: flex; align-items: center; gap: 5px; }
+.chip {
+  padding: 3px 9px !important;
+  font-size: 12px !important;
+  color: var(--apagado) !important;
+}
+.chip.activo { background: var(--acento-suave) !important; color: var(--texto) !important; border-color: var(--acento) !important; }
+
+#nombre-sesion { color: var(--apagado); font-size: 12px; white-space: nowrap; }
+
+.ayuda {
+  margin: 0;
+  padding: 5px 14px 8px;
+  background: var(--panel);
+  color: var(--apagado);
+  font-size: 11px;
+  border-top: 1px solid #0000;
+}
+
+/* ---- tablet y teléfono ----
+ * El vídeo arriba, a todo el ancho y con su proporción; los controles debajo en
+ * varias líneas; y el índice ocupa el resto de la pantalla con su propio scroll. */
+@media (max-width: 900px) {
+  header {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    padding: 8px 12px;
+  }
+  h1 { flex: 1; max-width: none; font-size: 14px; }
+  /* Los días bajan a su propia fila, a todo el ancho, con scroll lateral. */
+  #dias {
+    order: 3;
+    flex: 1 1 100%;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+    scroll-snap-type: x proximity;
+  }
+  #dias::-webkit-scrollbar { display: none; }
+  /* Degradado en el borde derecho: indica que hay más días desplazando. */
+  #dias { mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent); }
+  .dia { scroll-snap-align: start; padding: 7px 12px; }
+  .dia span { display: none; }   /* el nombre largo del día no cabe en un chip */
+  .dia strong { font-size: 14px; }
+
+  main { flex-direction: column; }
+  #escenario { order: -1; flex: none; }
+  #videos { flex: none; width: 100%; aspect-ratio: 16 / 9; max-height: 50dvh; }
+
+  #panel {
+    width: auto;
+    flex: 1;
+    border-right: 0;
+    border-top: 1px solid var(--borde);
+  }
+
+  /* Miniaturas proporcionales al vídeo, sin tapar demasiado la imagen grande. */
+  .caja-video { width: 30%; max-width: 160px; right: 8px; bottom: 8px; border-radius: 6px; }
+  .caja-video:nth-of-type(3) { right: calc(30% + 16px); }
+  .caja-video:nth-of-type(4) { right: calc(60% + 24px); }
+  .hueco { min-height: 50px; font-size: 11px; padding: 4px; }
+
+  /* Controles en varias líneas: la barra de tiempo arriba y a todo el ancho. */
+  #controles { flex-wrap: wrap; gap: 8px; padding: 8px 12px; }
+  #barra { order: -1; flex: 1 1 100%; margin: 0; height: 28px; }
+  #tiempo { margin-right: auto; font-size: 13px; }
+  label[for="velocidad"], #nombre-sesion, .ayuda { display: none; }
+  #audio { flex: 1 1 100%; }
+  #audio .etiqueta-control { margin-right: 2px; }
+}
+
+/* Pantallas táctiles: objetivos de al menos 40 px para el dedo. */
+@media (hover: none), (max-width: 900px) {
+  #controles button, #velocidad, #origen { min-height: 40px; padding: 6px 12px; }
+  #reproducir { min-width: 52px; font-size: 18px; }
+  .chip { min-height: 36px !important; padding: 6px 14px !important; font-size: 13px !important; }
+  .dia { min-height: 40px; }
+  .capitulo { padding: 10px 8px; }
+  .cabecera-sesion { padding: 10px 8px; }
+  .etiqueta { padding: 5px 10px; font-size: 12px; }
+  /* iOS amplía la página al enfocar un campo con letra de menos de 16 px. */
+  #buscar { font-size: 16px; padding: 10px 12px; }
+  .ayuda { display: none; }
+}
+
+@media (max-width: 480px) {
+  .origen .etiqueta-control { display: none; }
+  #atras, #adelante { padding: 6px 10px; }
+}

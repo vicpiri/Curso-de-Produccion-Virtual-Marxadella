@@ -1,0 +1,55 @@
+{
+ "sesiones": [
+  {"n": 1, "capitulos": [
+     {"t": 0, "titulo": "Instalación del Epic Games Launcher y Unreal en inglés", "resumen": "Se descarga e instala el Epic Games Launcher y Unreal Engine configurados en inglés para evitar problemas con los menús."},
+     {"t": 554, "titulo": "Interfaz del launcher, versión de Unreal y assets en FAB/Sketchfab", "resumen": "Se explica la sección Library, cómo cada InfinitySet exige una versión de Unreal y cómo descargar assets en FAB y Sketchfab."},
+     {"t": 2164, "titulo": "Escala real en InfinitySet: metros, ejes y data bar", "resumen": "Se importa el templo escaneado, se compara su escala en metros con un cubo de referencia y se recoloca el origen del set."}
+  ]},
+  {"n": 2, "capitulos": [
+     {"t": 0, "titulo": "Movimiento de cámara virtual: orbit, pan y zoom", "resumen": "Se explican los atajos Alt, botón central y Alt+Shift para orbitar, panear y hacer zoom con la cámara virtual."},
+     {"t": 245, "titulo": "CrossPoints, TrackFree y calibración del actor por proyección", "resumen": "Se explican los crosspoints, el modo TrackFree con presets de cámara, el actor sticker/proyección y la calibración del FOV."}
+  ]},
+  {"n": 3, "capitulos": [
+     {"t": 0, "titulo": "Sombras del actor: spotlight, cast shadows y frustrum", "resumen": "Se crea un spotlight, se activa cast shadows en actor y escenario y se ajusta el frustrum de la sombra proyectada."},
+     {"t": 596, "titulo": "Corrección de color, profundidad de campo y free walking", "resumen": "Se ajusta el balance de blancos del actor, se configura el depth of field y se explican los límites del modo trackless."},
+     {"t": 1497, "titulo": "Cierre de la sesión trackless y arranque de Unreal Engine", "resumen": "Se cierra el ejemplo de producción trackless y se empieza a instalar y lanzar Unreal Engine desde el launcher."}
+  ]},
+  {"n": 4, "capitulos": [
+     {"t": 0, "titulo": "Creación de un proyecto en Unreal y primeros pasos", "resumen": "Se crea un proyecto en blanco, se explican el Outliner y el Content Browser y se guarda un nivel vacío para InfinitySet."}
+  ]},
+  {"n": 5, "capitulos": [
+     {"t": 0, "titulo": "Vincular Unreal con Infinity: el mapa por defecto", "resumen": "Se explica cómo fijar en Project Settings el mapa (Default Maps) que Infinity debe cargar al lanzar Unreal."}
+  ]},
+  {"n": 7, "capitulos": [
+     {"t": 0, "titulo": "FAB: crear proyectos con assets y elegir versión de Unreal", "resumen": "Se descargan assets desde FAB (Hillside, trinchera) creando un proyecto con la versión de Unreal correcta."},
+     {"t": 319, "titulo": "Screen Percentage, DLSS, frame rate y punto cero con USTL", "resumen": "Se explican el escalado DLSS, las estadísticas de rendimiento, el offset del punto cero de tracking, los transfers y el USTL."}
+  ]},
+  {"n": 8, "capitulos": [
+     {"t": 0, "titulo": "Content Browser, filtros y niveles con subniveles", "resumen": "Se exploran los filtros del Content Browser y se descubre que el nivel descargado usa subniveles con una escena padre."},
+     {"t": 318, "titulo": "Navegación WASD, punto cero real y alineación del suelo", "resumen": "Se enseña la navegación WASD y la tecla F, se localiza el punto cero real del escenario y se alinea el suelo con Infinity."}
+  ]},
+  {"n": 9, "capitulos": [
+     {"t": 0, "titulo": "Recapitulación: lanzar el proyecto de Unreal desde Infinity", "resumen": "Breve resumen de los pasos para abrir un proyecto de Unreal desde Infinity y lanzarlo."}
+  ]},
+  {"n": 10, "capitulos": [
+     {"t": 0, "titulo": "Repaso: offset de cámara para alinear el punto cero de Unreal", "resumen": "Se repasa cómo alinear el suelo y el punto cero de Unreal con Infinity mediante el offset de cámara."}
+  ]},
+  {"n": 11, "capitulos": [
+     {"t": 0, "titulo": "Post-process volumes y auto-exposición en Unreal", "resumen": "Se ajusta el post-process volume con InfiniteExtent y se desactiva la auto-exposición para que la apertura no altere la luz."},
+     {"t": 785, "titulo": "Actor en proyección, DLSS y compositor en TrackFree/TrackVR", "resumen": "Se calibra el actor, se ajusta el rendimiento con Screen Percentage y DLSS y se activa el compositor para integrarlo en Unreal."},
+     {"t": 2049, "titulo": "AR, recapitulación TrackFree/TrackVR y cuándo usar Unreal", "resumen": "Se introduce el modo AR, se repasan las diferencias entre TrackFree y TrackVR y cuándo integrar el actor vía Unreal o Infinity."}
+  ]},
+  {"n": 12, "capitulos": [
+     {"t": 0, "titulo": "Modo Track AR: vídeo con tracking embebido y objetos anclados", "resumen": "Se crea un proyecto Track AR usando un vídeo con tracking embebido en playlist y se ancla un data bar al suelo."},
+     {"t": 211, "titulo": "Composición AR sin Unreal: barra 3D, texto, reflector y sombras", "resumen": "Se crea una barra y un texto 3D, se añade un reflector con ghost mode y sombras para integrar los gráficos en la escena AR."}
+  ]},
+  {"n": 13, "capitulos": [
+     {"t": 0, "titulo": "SynthEyes y Media Data Embedder para vídeos pretrackeados", "resumen": "Se explica cómo generar en SynthEyes un tracking en CSV y embeberlo en el vídeo con el Media Data Embedder de Brainstorm."}
+  ]},
+  {"n": 14, "capitulos": [
+     {"t": 0, "titulo": "Tipos de input y de crosspoint: stack, Aston y mixer", "resumen": "Se repasan los tipos de input (vídeo, movie, playlist, textura, Aston) y los crosspoints stack, mixer e input para video wall."},
+     {"t": 695, "titulo": "Transferir una textura de Infinity a Unreal con Transfers", "resumen": "Se asigna un input a un plano de Unreal creando un material con base color y emisivo, lanzando el proyecto con el plugin Brainstorm."},
+     {"t": 2010, "titulo": "Controlar objetos de Unreal desde Infinity con USTL", "resumen": "Se crea un controlador USTL para mover desde Infinity un objeto de Unreal marcado como movible."}
+  ]}
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "sesiones": [
+  {"n": 1, "capitulos": [
+     {"t": 0, "titulo": "Problemas de tracking: interferencias infrarrojas", "resumen": "Detectan que el tracking recibe interferencias infrarrojas de otra cámara y ajustan el soporte antes de empezar."},
+     {"t": 445, "titulo": "Configuración de los dos trackings: clon y principal", "resumen": "Explican por qué hay dos configuraciones de tracking, cuál es la principal y cuándo usar ambas, como en XR."},
+     {"t": 639, "titulo": "Crear un proyecto Unreal vacío y buscar assets en FAB", "resumen": "Crean un proyecto Unreal en blanco y buscan en Epic Games Launcher/FAB un vehículo gratuito para el AR."},
+     {"t": 2204, "titulo": "Migrar assets con Migrate y configurar Project Settings", "resumen": "Llevan el coche a otro proyecto con Asset Actions > Migrate y configuran mapa por defecto, exposición y SM6."},
+     {"t": 2527, "titulo": "Añadir coche y luz, y crear controles USTL para moverlos", "resumen": "Meten el coche y un point light en Unreal, cargan el proyecto en Infinity y crean controles USTL de posición."},
+     {"t": 3149, "titulo": "Cross point AR: compositor e Image Based Lighting", "resumen": "Activan el compositor, muestran el Input Cube y usan Image Based Lighting y Media Shadows para integrar el coche."},
+     {"t": 3859, "titulo": "Personaje animado (skeletal mesh) y video wall", "resumen": "Añaden un personaje esqueletal con animación idle y prueban cómo una textura en el video wall afecta a la iluminación AR."},
+     {"t": 4831, "titulo": "Segundo ejercicio de AR desde cero: el tigre animado", "resumen": "Una alumna repite todo el proceso creando un nuevo proyecto AR con un tigre animado, de Unreal a Infinity."},
+     {"t": 5894, "titulo": "Organizar el formulario: grupos, iconos y rollouts", "resumen": "Añaden al formulario los controles de posición, color e intensidad de luz, agrupados con rollouts para el operador."},
+     {"t": 6548, "titulo": "Sombras, reflejos y versiones de proyecto en Unreal", "resumen": "Ajustan el cubo de luz para lograr sombras sin cortes, exploran los reflejos de Unreal y explican las versiones de proyecto."}
+  ]},
+  {"n": 2, "capitulos": [
+     {"t": 0, "titulo": "Alinear el mundo de Unreal con el tracking (offset)", "resumen": "Mueven y rotan el mundo de Unreal con el tracking offset para que coincida con el punto cero real, en el proyecto del museo."},
+     {"t": 153, "titulo": "Overlay tradicional en VR: chroma key y 3D Mate", "resumen": "Configuran el chroma key y ajustan el 3D Mate (rotación, bordes, blend) para recortar el chroma en el overlay tradicional."}
+  ]},
+  {"n": 3, "capitulos": [
+     {"t": 0, "titulo": "Salida de vídeo por NDI para monitorizar en red", "resumen": "Configuran una salida NDI del programa para verla en un móvil u otro dispositivo de la misma red Wi-Fi."},
+     {"t": 634, "titulo": "Recibir por red la cámara de un móvil como input NDI", "resumen": "Crean un input de tipo Network para mostrar en un objeto la señal emitida en directo por la cámara de un móvil."}
+  ]},
+  {"n": 4, "capitulos": [
+     {"t": 0, "titulo": "Control DMX desde Infinity y cartas de calibración", "resumen": "Comentan que Infinity puede controlar DMX de luces del estudio y buscan las cartas para calibrar las cámaras."},
+     {"t": 351, "titulo": "VR compuesto en Unreal: compositor, reveals y reflejos", "resumen": "Activan el compositor de Unreal para el VR, con sombras y reflejos reales, y logran que el actor pase detrás de una columna."},
+     {"t": 1489, "titulo": "Luz de emergencia, bloom y overlay vs. Unreal", "resumen": "Simulan una luz roja de emergencia con bloom sobre el actor y recapitulan las diferencias entre overlay y composición en Unreal."},
+     {"t": 2148, "titulo": "Filtro de tracking en Antilatency y nueva escena VR", "resumen": "Buscan el filtro de posición del tracking en Antilatency Service y crean un proyecto VR con un concesionario de coches."},
+     {"t": 3277, "titulo": "Offset, 3D Mate e Input Surface: bug del tracking", "resumen": "Configuran el offset, el 3D Mate y el Input Surface para la nueva escena, resolviendo un bug reiniciando Infinity."},
+     {"t": 5072, "titulo": "Luz de relleno con control USTL y repaso general", "resumen": "Añaden un point light con control de brillo por USTL y repasan lo visto hasta ahora: chroma key, 3D Mate, USTL y XR."},
+     {"t": 6175, "titulo": "Cambio y calibración de un nuevo objetivo: FOV y foco", "resumen": "Calibran un nuevo objetivo Canon Prime 24: field of view, curva de foco por marcas y reseteo del encoder."},
+     {"t": 7760, "titulo": "Probar el objetivo en el XR con Lens Profile Loader", "resumen": "Aplican el objetivo calibrado al proyecto XR y muestran el script Lens Profile Loader para cambiarlo en directo."},
+     {"t": 8256, "titulo": "Post-Process Volume: color, LUTs, grano y bloom", "resumen": "Explican los parámetros de corrección de color del post-process, cómo importar LUTs propias y efectos como grano y bloom."},
+     {"t": 9534, "titulo": "Exponer parámetros del post-process en el Level Blueprint", "resumen": "Crean Custom Events en el Level Blueprint para controlar exposición, saturación y contraste desde Infinity."},
+     {"t": 9845, "titulo": "Aplicar controles en el XR y añadir el control del sol", "resumen": "Depuran un conflicto entre varios Custom Events y añaden el control de la luz direccional para simular amanecer y atardecer."}
+  ]}
+ ]
+}

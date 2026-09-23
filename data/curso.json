@@ -1,0 +1,1515 @@
+{
+ "curso": "Producción Virtual Brainstorm (Marxadella 2026)",
+ "dias": [
+  {
+   "id": "dia01",
+   "etiqueta": "Día 01",
+   "titulo": "Camera Setup y Video Setup",
+   "carpeta": "Día 01 - Camera Setup y Video Setup",
+   "sesiones": [
+    {
+     "n": 1,
+     "duracion": 7079.47,
+     "fuentes": [
+      {
+       "id": "2026-07-15 08-38-34",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-15 08-38-34.mp4",
+       "duracion": 7079.47,
+       "desfase": 0.0,
+       "mudo": true,
+       "principal": true,
+       "youtube": "1QLqsZgeGSk"
+      },
+      {
+       "id": "Brainstorm_dia1_1",
+       "etiqueta": "Cámara",
+       "url": "comprimidos/Brainstorm_dia1_1.mp4",
+       "duracion": 7075.2,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": false,
+       "youtube": "ALM43PSPjKQ"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Presentación del curso y licencias de Brainstorm Suite",
+       "resumen": "Óscar presenta el curso, las apps de la Suite (InfinitySet, Aston, Unreal Engine) y cómo instalar y gestionar la licencia."
+      },
+      {
+       "t": 939,
+       "titulo": "Sincronización SDI/NDI y la tarjeta Blackmagic",
+       "resumen": "Se explican los límites de sincronía del NDI frente al SDI y se recorren físicamente los conectores de la tarjeta Blackmagic."
+      },
+      {
+       "t": 1714,
+       "titulo": "Configuración de la entrada de vídeo en Video Setup",
+       "resumen": "Se configura la entrada de la cámara PTZ: tarjeta, card, conector, formato, rango de color y prueba con el botón test."
+      },
+      {
+       "t": 2430,
+       "titulo": "Entrada NDI, IP de la PTZ e identificador de red",
+       "resumen": "Se añade una segunda entrada NDI de prueba, se ajusta la IP de la cámara PTZ y se fija su identificador en la red."
+      },
+      {
+       "t": 3870,
+       "titulo": "Configuración de las salidas y los pipes de InfinitySet",
+       "resumen": "Se configuran las salidas de programa y video wall y se explica el enrutamiento de señales mediante pipes."
+      },
+      {
+       "t": 4309,
+       "titulo": "Salida Fill+Key y flujo de rotulación en televisión",
+       "resumen": "Se configura una salida Fill y Key con la tarjeta Blackmagic y se explica su uso habitual en rotulación de televisión."
+      },
+      {
+       "t": 5227,
+       "titulo": "GPUs duales y límites de cámaras según la producción",
+       "resumen": "Se habla de tarjetas gráficas duales, RTX frente a Quadro, y cuántas cámaras admite cada tipo de producción."
+      },
+      {
+       "t": 5980,
+       "titulo": "Ejemplos de video wall, stacks y sincronismo físico",
+       "resumen": "Se analizan ejemplos reales como Mandalorian, el concepto de stack para componer imagen y el cableado del genlock."
+      }
+     ]
+    },
+    {
+     "n": 2,
+     "duracion": 8108.9,
+     "fuentes": [
+      {
+       "id": "2026-07-15 11-36-51",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-15 11-36-51.mp4",
+       "duracion": 8108.9,
+       "desfase": 0.0,
+       "mudo": true,
+       "principal": true,
+       "youtube": "PZNxiqaPnm0"
+      },
+      {
+       "id": "Brainstorm_dia1_2",
+       "etiqueta": "Cámara",
+       "url": "comprimidos/Brainstorm_dia1_2.mp4",
+       "duracion": 7970.88,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": false,
+       "youtube": "Z9tuCNCOw3Y"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Camera Setup: interfaz y gestión de presets",
+       "resumen": "Se presenta la interfaz de Camera Setup y por qué cada combinación de cámara y lente necesita su propio preset."
+      },
+      {
+       "t": 269,
+       "titulo": "Tracking Antilatency: barras, sensor y encoders",
+       "resumen": "Se explica el tracking óptico de barras en el techo, el sensor de la cámara, la VirtualBox y los encoders de zoom y foco."
+      },
+      {
+       "t": 890,
+       "titulo": "Precisión del tracking y chroma key frente a video wall",
+       "resumen": "Se comparan chroma y video wall (reflejos, extensión de set, multicámara) y los límites del área de cobertura del tracking."
+      },
+      {
+       "t": 1505,
+       "titulo": "El anillo de foco electrónico y el limitador Tilta",
+       "resumen": "Se explica el problema del anillo de foco infinito de la óptica y su solución con un follow focus limitador Tilta."
+      },
+      {
+       "t": 1846,
+       "titulo": "Interfaz web de la VirtualBox y primer preset",
+       "resumen": "Se recorre la web vpbox.local (genlock, posición, ejes) y se crea el preset con entrada de vídeo, cámara y protocolo FreeD."
+      },
+      {
+       "t": 2788,
+       "titulo": "Recepción de tracking por UDP, columnas de datos y fase",
+       "resumen": "Se configura el puerto UDP para recibir el tracking, se mapean las columnas de datos y se ajusta la fase para evitar tirones."
+      },
+      {
+       "t": 3634,
+       "titulo": "Normalización de la lente y el lens center",
+       "resumen": "Se normalizan las curvas de zoom y foco y se calcula el centro óptico (lens center) con un zoom virtual de referencia."
+      },
+      {
+       "t": 5056,
+       "titulo": "Calibración automática del FOV con el patrón de ajedrez",
+       "resumen": "Se fotografía un tablero de ajedrez rígido desde muchas posiciones para que el sistema calcule el field of view de la lente."
+      },
+      {
+       "t": 5901,
+       "titulo": "Revisión del error de calibración y aplicación del FOV",
+       "resumen": "Se revisan las fotos y su margen de error, se descartan las peores y se aplica el FOV calculado a la curva de zoom."
+      },
+      {
+       "t": 6456,
+       "titulo": "Offset del sensor (CCD) y calibración de la curva de zoom",
+       "resumen": "Se mide el desplazamiento del sensor de tracking respecto al centro de la lente y se calibra el zoom con un objeto de referencia."
+      }
+     ]
+    },
+    {
+     "n": 3,
+     "duracion": 2524.33,
+     "fuentes": [
+      {
+       "id": "2026-07-15 13-55-11",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-15 13-55-11.mp4",
+       "duracion": 2523.27,
+       "desfase": 0.0,
+       "mudo": true,
+       "principal": true,
+       "youtube": "GlUUSrB_9Ng"
+      },
+      {
+       "id": "Brainstorm_dia1_3",
+       "etiqueta": "Cámara",
+       "url": "comprimidos/Brainstorm_dia1_3.mp4",
+       "duracion": 2524.33,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": false,
+       "youtube": "bd8pLBCUq3Q"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Calibración de la curva de zoom y el punto nodal",
+       "resumen": "Se ajusta iterativamente la curva de zoom comparando una caja real y virtual, corrigiendo también el punto nodal de la lente."
+      },
+      {
+       "t": 1554,
+       "titulo": "Niveles de foco: varias curvas de zoom según la distancia",
+       "resumen": "Se explica que cada distancia de enfoque necesita su propia curva de zoom y cómo afecta esto a un transfoco."
+      },
+      {
+       "t": 2092,
+       "titulo": "Visualización del punto nodal y curva de foco",
+       "resumen": "Se visualiza cómo se desplaza virtualmente el punto nodal al hacer zoom y se empieza la calibración de la curva de foco."
+      }
+     ]
+    },
+    {
+     "n": 4,
+     "duracion": 1737.13,
+     "fuentes": [
+      {
+       "id": "2026-07-15 14-39-24",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-15 14-39-24.mp4",
+       "duracion": 1736.96,
+       "desfase": 0.0,
+       "mudo": true,
+       "principal": true,
+       "youtube": "soRc_DgE0qg"
+      },
+      {
+       "id": "Brainstorm_dia1_4",
+       "etiqueta": "Cámara",
+       "url": "comprimidos/Brainstorm_dia1_4.mp4",
+       "duracion": 1737.13,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": false,
+       "youtube": "ocxsDTPRx30"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Curva de foco mediante distancias medidas",
+       "resumen": "Se completa la curva de foco creando keyframes en distancias medidas físicamente, de 0,7 metros hasta el infinito."
+      },
+      {
+       "t": 697,
+       "titulo": "Ajuste de la distorsión de la lente (K1 y K2)",
+       "resumen": "Se ajustan los parámetros de distorsión K1 y K2 comparando una caja real y virtual en las esquinas del encuadre."
+      },
+      {
+       "t": 1185,
+       "titulo": "Delay de vídeo y tracking, y cierre de la calibración",
+       "resumen": "Se ajusta el delay de vídeo y tracking por eje para eliminar tirones, y se guarda el preset final de la cámara."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dia02",
+   "etiqueta": "Día 02",
+   "titulo": "Introducción a InfinitySet",
+   "carpeta": "Día 02 - Introducción a Infinityset",
+   "sesiones": [
+    {
+     "n": 1,
+     "duracion": 7783.23,
+     "fuentes": [
+      {
+       "id": "2026-07-16 08-25-24",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-16 08-25-24.mp4",
+       "duracion": 7783.23,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": true,
+       "youtube": "MjUElglH4zk"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Estándares 3D: FBX, materiales PBR y mapeado UV",
+       "resumen": "Evolución de OBJ a FBX, canales de materiales PBR, mapeado UV y primera pantalla de bienvenida de InfinitySet."
+      },
+      {
+       "t": 989,
+       "titulo": "Listas de InfinitySet, estadísticas y salida de vídeo",
+       "resumen": "Iconos de listas de objetos y materiales, overlay de estadísticas en tiempo real, y el Display Port como salida real."
+      },
+      {
+       "t": 1729,
+       "titulo": "Primitivas, matriz de transformación y consola Python",
+       "resumen": "Creación de primitivas, propiedades de matriz y pivote, y consola Python con itemSet, itemGet e itemGo."
+      },
+      {
+       "t": 2376,
+       "titulo": "Textos, curvas Bézier, partículas, clones y StormLogic",
+       "resumen": "Objetos de texto, curvas Bézier, partículas, clones e instancias, y comparación de interfaz con Aston y su StormLogic."
+      },
+      {
+       "t": 3295,
+       "titulo": "Navegación de cámara y manipulación con gizmos (W/E/R)",
+       "resumen": "Controles de órbita, zoom y paneo de cámara, atajos W/E/R, y gestión del pivote para rotar y escalar bien."
+      },
+      {
+       "t": 4110,
+       "titulo": "Materiales por cara, canal alfa y escalas métricas",
+       "resumen": "Materiales por cada cara de un objeto, canal alfa, unidades métricas al importar FBX y tangentes para shaders."
+      },
+      {
+       "t": 5725,
+       "titulo": "Librería del Browser, FBX externo y gestión de proyectos",
+       "resumen": "Uso del Browser para fondos y objetos, importación de un FBX externo, versiones y exportación de proyectos."
+      }
+     ]
+    },
+    {
+     "n": 2,
+     "duracion": 6718.8,
+     "fuentes": [
+      {
+       "id": "2026-07-16 11-16-24",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-16 11-16-24.mp4",
+       "duracion": 6718.8,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": true,
+       "youtube": "jgbvdUiRrCU"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Librería de assets: backgrounds, stands y pointers",
+       "resumen": "Presentación de la librería de objetos de InfinitySet y cómo cargar backgrounds, stands y pointers en el proyecto."
+      },
+      {
+       "t": 323,
+       "titulo": "Video Setup vs proyecto: override de tracking y FOV",
+       "resumen": "Diferencia entre la configuración global del Video Setup y la del proyecto, con override del field of view de la cámara."
+      },
+      {
+       "t": 697,
+       "titulo": "Escenas con form, custom folder y clipping para XR",
+       "resumen": "Uso del form y custom folder de una escena y de un plano de clipping para integrar el fondo con pantallas LED en XR."
+      },
+      {
+       "t": 1243,
+       "titulo": "Timers y producciones: timeline in/out, self/brother",
+       "resumen": "Timers para animaciones cíclicas y producciones de entrada/salida, self in/out y brother in/out de una composición."
+      },
+      {
+       "t": 2299,
+       "titulo": "Tab Custom: keyframes, transiciones y curvas",
+       "resumen": "El tab Custom permite crear keyframes de escala/desplazamiento, añadir transiciones y aplicar curvas con la tecla U."
+      },
+      {
+       "t": 4028,
+       "titulo": "Producciones, acciones, Presenter, OnDemand y Unreal",
+       "resumen": "Producciones con estado final, acciones, efecto Presenter para automatizar in/out, y diferencias entre OnDemand y Unreal."
+      },
+      {
+       "t": 5706,
+       "titulo": "Botón Library, efectos, object coordinates y reflector",
+       "resumen": "Atajo del botón Library, efectos según el objeto, cómo enganchar un objeto a pantalla y el efecto reflector con PBR."
+      }
+     ]
+    },
+    {
+     "n": 3,
+     "duracion": 7303.23,
+     "fuentes": [
+      {
+       "id": "2026-07-16 13-19-54",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-16 13-19-54.mp4",
+       "duracion": 7303.23,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": true,
+       "youtube": "uBZDs17OIJA"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Escenas, grupos de librería y texturas por arrastre",
+       "resumen": "Explica cómo se organiza el proyecto en escenas y grupos de librería, y cómo aplicar una textura arrastrándola."
+      },
+      {
+       "t": 427,
+       "titulo": "Timers, binds GoTo/FreeBind y datos con LLString",
+       "resumen": "Anima una rotación infinita con timer y bind GoTo, y vincula un texto a una tabla LLString con offset de rotación."
+      },
+      {
+       "t": 1788,
+       "titulo": "Fuentes texturizadas, filled y extruidas; justificación",
+       "resumen": "Compara fuentes texturizadas, filled y extruidas, y explica cómo justificar el texto respecto a su caja o línea."
+      },
+      {
+       "t": 2471,
+       "titulo": "Z-fighting, bind de fondo al texto y lower third",
+       "resumen": "Evita el z-fighting, crea un bind para ajustar el fondo al texto, y monta un lower third con producciones in/out."
+      },
+      {
+       "t": 3633,
+       "titulo": "Break at End y Object Coordinates para anclar a pantalla",
+       "resumen": "Explica el Break at End para animaciones infinitas y el efecto Object Coordinates para fijar gráficos a la cámara."
+      },
+      {
+       "t": 4415,
+       "titulo": "Reutilizar gráficos, forms y buenas prácticas",
+       "resumen": "Guarda gráficos como sets reutilizables, crea un form para el operador, y recomienda mostrar solo lo necesario."
+      },
+      {
+       "t": 5718,
+       "titulo": "Materiales 2D/3D, sombras, cubemaps y PBR Environment",
+       "resumen": "Diferencia entre materiales 2D y 3D, sombras, cubemaps para reflexiones metálicas y un HDR como PBR Environment."
+      },
+      {
+       "t": 6966,
+       "titulo": "Importación FBX, triangulación y mapeado UV",
+       "resumen": "Repasa el importador FBX, la triangulación obligatoria y el mapeado UV, con el problema de texturas repetidas."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dia03",
+   "etiqueta": "Día 03",
+   "titulo": "Actores, inputs, chroma key y Unreal",
+   "carpeta": "Día 03 - Actores, Inputs, Chromakey. UE",
+   "sesiones": [
+    {
+     "n": 1,
+     "duracion": 2764.6,
+     "fuentes": [
+      {
+       "id": "2026-07-20 08-16-47",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-20 08-16-47.mp4",
+       "duracion": 2764.6,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": true,
+       "youtube": "6mXeFmpLAdk"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Instalación del Epic Games Launcher y Unreal en inglés",
+       "resumen": "Se descarga e instala el Epic Games Launcher y Unreal Engine configurados en inglés para evitar problemas con los menús."
+      },
+      {
+       "t": 554,
+       "titulo": "Interfaz del launcher, versión de Unreal y assets en FAB/Sketchfab",
+       "resumen": "Se explica la sección Library, cómo cada InfinitySet exige una versión de Unreal y cómo descargar assets en FAB y Sketchfab."
+      },
+      {
+       "t": 2164,
+       "titulo": "Escala real en InfinitySet: metros, ejes y data bar",
+       "resumen": "Se importa el templo escaneado, se compara su escala en metros con un cubo de referencia y se recoloca el origen del set."
+      }
+     ]
+    },
+    {
+     "n": 2,
+     "duracion": 1388.73,
+     "fuentes": [
+      {
+       "id": "2026-07-20 09-03-44",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-20 09-03-44.mp4",
+       "duracion": 1388.73,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": true,
+       "youtube": "oYnDad13_VY"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Movimiento de cámara virtual: orbit, pan y zoom",
+       "resumen": "Se explican los atajos Alt, botón central y Alt+Shift para orbitar, panear y hacer zoom con la cámara virtual."
+      },
+      {
+       "t": 245,
+       "titulo": "CrossPoints, TrackFree y calibración del actor por proyección",
+       "resumen": "Se explican los crosspoints, el modo TrackFree con presets de cámara, el actor sticker/proyección y la calibración del FOV."
+      }
+     ]
+    },
+    {
+     "n": 3,
+     "duracion": 1629.17,
+     "fuentes": [
+      {
+       "id": "2026-07-20 09-33-33",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-20 09-33-33.mp4",
+       "duracion": 1629.17,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": true,
+       "youtube": "ghBRZsiVlj4"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Sombras del actor: spotlight, cast shadows y frustrum",
+       "resumen": "Se crea un spotlight, se activa cast shadows en actor y escenario y se ajusta el frustrum de la sombra proyectada."
+      },
+      {
+       "t": 596,
+       "titulo": "Corrección de color, profundidad de campo y free walking",
+       "resumen": "Se ajusta el balance de blancos del actor, se configura el depth of field y se explican los límites del modo trackless."
+      },
+      {
+       "t": 1497,
+       "titulo": "Cierre de la sesión trackless y arranque de Unreal Engine",
+       "resumen": "Se cierra el ejemplo de producción trackless y se empieza a instalar y lanzar Unreal Engine desde el launcher."
+      }
+     ]
+    },
+    {
+     "n": 4,
+     "duracion": 854.43,
+     "fuentes": [
+      {
+       "id": "2026-07-20 10-01-14 (recuperado)",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-20 10-01-14 (recuperado).mp4",
+       "duracion": 854.43,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": true,
+       "youtube": "9Gz2ivOA0TE"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Creación de un proyecto en Unreal y primeros pasos",
+       "resumen": "Se crea un proyecto en blanco, se explican el Outliner y el Content Browser y se guarda un nivel vacío para InfinitySet."
+      }
+     ]
+    },
+    {
+     "n": 5,
+     "duracion": 484.83,
+     "fuentes": [
+      {
+       "id": "2026-07-20 10-18-53",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-20 10-18-53.mp4",
+       "duracion": 484.83,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": true,
+       "youtube": "cZQ2aHhJwxA"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Vincular Unreal con Infinity: el mapa por defecto",
+       "resumen": "Se explica cómo fijar en Project Settings el mapa (Default Maps) que Infinity debe cargar al lanzar Unreal."
+      }
+     ]
+    },
+    {
+     "n": 7,
+     "duracion": 1091.33,
+     "fuentes": [
+      {
+       "id": "2026-07-20 10-33-50",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-20 10-33-50.mp4",
+       "duracion": 1091.33,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": true,
+       "youtube": "i3acWv7SN7c"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "FAB: crear proyectos con assets y elegir versión de Unreal",
+       "resumen": "Se descargan assets desde FAB (Hillside, trinchera) creando un proyecto con la versión de Unreal correcta."
+      },
+      {
+       "t": 319,
+       "titulo": "Screen Percentage, DLSS, frame rate y punto cero con USTL",
+       "resumen": "Se explican el escalado DLSS, las estadísticas de rendimiento, el offset del punto cero de tracking, los transfers y el USTL."
+      }
+     ]
+    },
+    {
+     "n": 8,
+     "duracion": 1130.87,
+     "fuentes": [
+      {
+       "id": "2026-07-20 11-37-01 (recuperado)",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-20 11-37-01 (recuperado).mp4",
+       "duracion": 1130.87,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": true,
+       "youtube": "8oEsgo9s1mw"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Content Browser, filtros y niveles con subniveles",
+       "resumen": "Se exploran los filtros del Content Browser y se descubre que el nivel descargado usa subniveles con una escena padre."
+      },
+      {
+       "t": 318,
+       "titulo": "Navegación WASD, punto cero real y alineación del suelo",
+       "resumen": "Se enseña la navegación WASD y la tecla F, se localiza el punto cero real del escenario y se alinea el suelo con Infinity."
+      }
+     ]
+    },
+    {
+     "n": 9,
+     "duracion": 267.73,
+     "fuentes": [
+      {
+       "id": "2026-07-20 12-11-47",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-20 12-11-47.mp4",
+       "duracion": 267.73,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": true,
+       "youtube": "vCf4o4MVRUg"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Recapitulación: lanzar el proyecto de Unreal desde Infinity",
+       "resumen": "Breve resumen de los pasos para abrir un proyecto de Unreal desde Infinity y lanzarlo."
+      }
+     ]
+    },
+    {
+     "n": 10,
+     "duracion": 200.0,
+     "fuentes": [
+      {
+       "id": "2026-07-20 12-17-48",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-20 12-17-48.mp4",
+       "duracion": 200.0,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": true,
+       "youtube": "jLUllA0edNc"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Repaso: offset de cámara para alinear el punto cero de Unreal",
+       "resumen": "Se repasa cómo alinear el suelo y el punto cero de Unreal con Infinity mediante el offset de cámara."
+      }
+     ]
+    },
+    {
+     "n": 11,
+     "duracion": 2592.73,
+     "fuentes": [
+      {
+       "id": "2026-07-20 12-27-47",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-20 12-27-47.mp4",
+       "duracion": 2592.73,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": true,
+       "youtube": "OpIqWQqKIX4"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Post-process volumes y auto-exposición en Unreal",
+       "resumen": "Se ajusta el post-process volume con InfiniteExtent y se desactiva la auto-exposición para que la apertura no altere la luz."
+      },
+      {
+       "t": 785,
+       "titulo": "Actor en proyección, DLSS y compositor en TrackFree/TrackVR",
+       "resumen": "Se calibra el actor, se ajusta el rendimiento con Screen Percentage y DLSS y se activa el compositor para integrarlo en Unreal."
+      },
+      {
+       "t": 2049,
+       "titulo": "AR, recapitulación TrackFree/TrackVR y cuándo usar Unreal",
+       "resumen": "Se introduce el modo AR, se repasan las diferencias entre TrackFree y TrackVR y cuándo integrar el actor vía Unreal o Infinity."
+      }
+     ]
+    },
+    {
+     "n": 12,
+     "duracion": 1239.83,
+     "fuentes": [
+      {
+       "id": "2026-07-20 13-17-34",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-20 13-17-34.mp4",
+       "duracion": 1239.83,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": true,
+       "youtube": "KosVMKtgMu4"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Modo Track AR: vídeo con tracking embebido y objetos anclados",
+       "resumen": "Se crea un proyecto Track AR usando un vídeo con tracking embebido en playlist y se ancla un data bar al suelo."
+      },
+      {
+       "t": 211,
+       "titulo": "Composición AR sin Unreal: barra 3D, texto, reflector y sombras",
+       "resumen": "Se crea una barra y un texto 3D, se añade un reflector con ghost mode y sombras para integrar los gráficos en la escena AR."
+      }
+     ]
+    },
+    {
+     "n": 13,
+     "duracion": 109.6,
+     "fuentes": [
+      {
+       "id": "2026-07-20 13-41-42",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-20 13-41-42.mp4",
+       "duracion": 109.6,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": true,
+       "youtube": "MsdbPEP4QaQ"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "SynthEyes y Media Data Embedder para vídeos pretrackeados",
+       "resumen": "Se explica cómo generar en SynthEyes un tracking en CSV y embeberlo en el vídeo con el Media Data Embedder de Brainstorm."
+      }
+     ]
+    },
+    {
+     "n": 14,
+     "duracion": 2131.3,
+     "fuentes": [
+      {
+       "id": "2026-07-20 14-18-17",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-20 14-18-17.mp4",
+       "duracion": 2131.3,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": true,
+       "youtube": "u1aRvvKcsZA"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Tipos de input y de crosspoint: stack, Aston y mixer",
+       "resumen": "Se repasan los tipos de input (vídeo, movie, playlist, textura, Aston) y los crosspoints stack, mixer e input para video wall."
+      },
+      {
+       "t": 695,
+       "titulo": "Transferir una textura de Infinity a Unreal con Transfers",
+       "resumen": "Se asigna un input a un plano de Unreal creando un material con base color y emisivo, lanzando el proyecto con el plugin Brainstorm."
+      },
+      {
+       "t": 2010,
+       "titulo": "Controlar objetos de Unreal desde Infinity con USTL",
+       "resumen": "Se crea un controlador USTL para mover desde Infinity un objeto de Unreal marcado como movible."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dia04",
+   "etiqueta": "Día 04",
+   "titulo": "Sesión del 21 de julio",
+   "carpeta": "Día 04",
+   "sesiones": [
+    {
+     "n": 1,
+     "duracion": 9441.19,
+     "fuentes": [
+      {
+       "id": "2026-07-21 08-30-34",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-21 08-30-34.mp4",
+       "duracion": 9426.04,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": true,
+       "youtube": "nAKPGNdfQ2w"
+      },
+      {
+       "id": "Brainstorm_dia4_1",
+       "etiqueta": "Cámara",
+       "url": "comprimidos/Brainstorm_dia4_1.mp4",
+       "duracion": 9435.84,
+       "desfase": 5.35,
+       "mudo": true,
+       "principal": false,
+       "youtube": "Du7BkL3heVc"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Calibración de la caja de referencia y offsets del tracking",
+       "resumen": "Miden una caja de referencia y ajustan los offsets del tracking Antilatency para corregir la deriva del punto cero."
+      },
+      {
+       "t": 1356,
+       "titulo": "Ajuste del genlock a 25 fps y de las resoluciones de vídeo",
+       "resumen": "Configuran el genlock a 25 fps y acaban trabajando en HD porque la tarjeta Blackmagic no permite mezclar resoluciones."
+      },
+      {
+       "t": 2862,
+       "titulo": "Escaneo LiDAR de la caja y alineación de la geometría en Maya",
+       "resumen": "Escanean la caja con LiDAR y Scaniverse, y alinean la geometría exportada al punto cero del mundo en Maya."
+      },
+      {
+       "t": 5069,
+       "titulo": "Proyecto Unreal y tipos de cross point XR (activo/pasivo)",
+       "resumen": "Descargan un proyecto de Unreal y explican la diferencia entre un XR activo (pantalla plana) y uno pasivo (curvo)."
+      },
+      {
+       "t": 5299,
+       "titulo": "Preparación del mapa en Unreal: exposición y offset del mundo",
+       "resumen": "Cambian el layout de Unreal, desactivan la autoexposición y crean un plano de referencia para el punto cero del mapa."
+      },
+      {
+       "t": 6074,
+       "titulo": "Montaje del XR pasivo: geometría, distorsión y dos trackings",
+       "resumen": "Configuran el cross point XR pasivo, desactivan lens center y distorsión, y clonan un segundo tracking sin distorsión."
+      },
+      {
+       "t": 6577,
+       "titulo": "Salidas por pipe y resolución del video wall en Blackmagic",
+       "resumen": "Asignan cada salida de vídeo a su pipe y prueban resoluciones HD y 4K para el video wall y el programa."
+      },
+      {
+       "t": 7438,
+       "titulo": "Construcción del set extension: extrusión en Maya",
+       "resumen": "Duplican y extruyen en Maya la geometría del video wall hacia arriba, abajo y los laterales para el set extension."
+      },
+      {
+       "t": 8082,
+       "titulo": "Alpha holdout de Unreal: el agujero y su activación",
+       "resumen": "Explican el alpha holdout como el agujero para ver la cámara real y lo activan en preferencias de Unreal (SM6, float RGBA)."
+      },
+      {
+       "t": 8937,
+       "titulo": "Alineación del holdout con el offset de calibración",
+       "resumen": "Ajustan posición y rotación del blueprint holdout para que coincida con el offset de la calibración de cámara."
+      }
+     ]
+    },
+    {
+     "n": 2,
+     "duracion": 6001.45,
+     "fuentes": [
+      {
+       "id": "2026-07-21 11-46-21",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-21 11-46-21.mp4",
+       "duracion": 5996.12,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": true,
+       "youtube": "GdnmBjUtdfY"
+      },
+      {
+       "id": "Brainstorm_dia4_2",
+       "etiqueta": "Cámara",
+       "url": "comprimidos/Brainstorm_dia4_2.mp4",
+       "duracion": 6001.45,
+       "desfase": -0.21,
+       "mudo": true,
+       "principal": false,
+       "youtube": "niRgsKt7gFo"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Primer resultado del set extension con el holdout activo",
+       "resumen": "Comprueban que el agujero del holdout funciona y ven por primera vez a una persona integrada con el set extension."
+      },
+      {
+       "t": 523,
+       "titulo": "Ajuste de iluminación y panel 'form' para los delays",
+       "resumen": "Bajan la luz que lava el video wall, ajustan iris y ganancia de la cámara, y empiezan un panel 'form' con los delays."
+      },
+      {
+       "t": 1380,
+       "titulo": "Sincronización de delays de vídeo y set extension",
+       "resumen": "Usan un vídeo partido entre video wall y set extension para ajustar frame a frame los delays hasta que encajan."
+      },
+      {
+       "t": 1897,
+       "titulo": "Control de la exposición de Unreal vía Level Blueprint",
+       "resumen": "Crean en el Level Blueprint de Unreal un evento que expone la exposición para controlarla en directo desde Brainstorm."
+      },
+      {
+       "t": 2528,
+       "titulo": "Ajuste de color e ISO de cámara frente al video wall",
+       "resumen": "Agrupan los editores de color y ajustan el ISO y el diafragma de la cámara para igualar los tonos con el video wall."
+      },
+      {
+       "t": 3520,
+       "titulo": "Vinculación del holdout y props en primer plano",
+       "resumen": "Vinculan la posición del holdout al offset del mundo de Unreal y añaden un carro para probar foco y parallax."
+      },
+      {
+       "t": 5625,
+       "titulo": "Ajuste fino de lens center y delay de tracking",
+       "resumen": "Ajustan el offset del lens center y el delay de tracking para reducir la deriva del punto cero al mover la cámara."
+      }
+     ]
+    },
+    {
+     "n": 3,
+     "duracion": 5168.03,
+     "fuentes": [
+      {
+       "id": "2026-07-21 13-30-23",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-21 13-30-23.mp4",
+       "duracion": 5158.2,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": true,
+       "youtube": "1myLPYQiomw"
+      },
+      {
+       "id": "Brainstorm_dia4_3",
+       "etiqueta": "Cámara",
+       "url": "comprimidos/Brainstorm_dia4_3.mp4",
+       "duracion": 5152.32,
+       "desfase": 15.71,
+       "mudo": true,
+       "principal": false,
+       "youtube": "BRiveq5DjbA"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Elección de escenarios en Unreal y plan para mañana",
+       "resumen": "Prueban varios mapas de Unreal para elegir escenario y deciden dedicar la sesión siguiente a chroma y realidad aumentada."
+      },
+      {
+       "t": 698,
+       "titulo": "Migración del alpha holdout a un nuevo proyecto",
+       "resumen": "Repiten en un proyecto de museo los ajustes de alpha holdout, alpha output, SM6 y float RGBA para el set extension."
+      },
+      {
+       "t": 1484,
+       "titulo": "Ajuste del offset de delay de tracking",
+       "resumen": "Prueban distintos offsets de delay de tracking moviendo la cámara, sin eliminar del todo la deriva del tracking."
+      },
+      {
+       "t": 1996,
+       "titulo": "Bibliotecas de assets de Unreal y geometría con IA",
+       "resumen": "Recorren bibliotecas de assets como Fab y ScansFactory y comentan IA que genera geometría 3D a partir de una foto."
+      },
+      {
+       "t": 3373,
+       "titulo": "Repetición del holdout en un nuevo mapa (Electric Dreams)",
+       "resumen": "Repiten la configuración del holdout en un nuevo mapa y alinean el suelo virtual con el punto cero del video wall."
+      },
+      {
+       "t": 4775,
+       "titulo": "Depuración de un fallo del gradiente del holdout",
+       "resumen": "Investigan por qué ha dejado de verse el degradado del holdout sin encontrar la causa antes de terminar la sesión."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dia05",
+   "etiqueta": "Día 05",
+   "titulo": "Sesión del 22 de julio",
+   "carpeta": "Día 05",
+   "sesiones": [
+    {
+     "n": 1,
+     "duracion": 7554.4,
+     "fuentes": [
+      {
+       "id": "2026-07-22 08-15-08",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-22 08-15-08.mp4",
+       "duracion": 7554.4,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": true,
+       "youtube": "5RBVz9WEm8U"
+      },
+      {
+       "id": "Brainstorm_dia5_1",
+       "etiqueta": "Cámara",
+       "url": "comprimidos/Brainstorm_dia5_1.mp4",
+       "duracion": 7445.76,
+       "desfase": 99.94,
+       "mudo": true,
+       "principal": false,
+       "youtube": "yd9Tz3bd978"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Problemas de tracking: interferencias infrarrojas",
+       "resumen": "Detectan que el tracking recibe interferencias infrarrojas de otra cámara y ajustan el soporte antes de empezar."
+      },
+      {
+       "t": 445,
+       "titulo": "Configuración de los dos trackings: clon y principal",
+       "resumen": "Explican por qué hay dos configuraciones de tracking, cuál es la principal y cuándo usar ambas, como en XR."
+      },
+      {
+       "t": 639,
+       "titulo": "Crear un proyecto Unreal vacío y buscar assets en FAB",
+       "resumen": "Crean un proyecto Unreal en blanco y buscan en Epic Games Launcher/FAB un vehículo gratuito para el AR."
+      },
+      {
+       "t": 2204,
+       "titulo": "Migrar assets con Migrate y configurar Project Settings",
+       "resumen": "Llevan el coche a otro proyecto con Asset Actions > Migrate y configuran mapa por defecto, exposición y SM6."
+      },
+      {
+       "t": 2527,
+       "titulo": "Añadir coche y luz, y crear controles USTL para moverlos",
+       "resumen": "Meten el coche y un point light en Unreal, cargan el proyecto en Infinity y crean controles USTL de posición."
+      },
+      {
+       "t": 3149,
+       "titulo": "Cross point AR: compositor e Image Based Lighting",
+       "resumen": "Activan el compositor, muestran el Input Cube y usan Image Based Lighting y Media Shadows para integrar el coche."
+      },
+      {
+       "t": 3859,
+       "titulo": "Personaje animado (skeletal mesh) y video wall",
+       "resumen": "Añaden un personaje esqueletal con animación idle y prueban cómo una textura en el video wall afecta a la iluminación AR."
+      },
+      {
+       "t": 4831,
+       "titulo": "Segundo ejercicio de AR desde cero: el tigre animado",
+       "resumen": "Una alumna repite todo el proceso creando un nuevo proyecto AR con un tigre animado, de Unreal a Infinity."
+      },
+      {
+       "t": 5894,
+       "titulo": "Organizar el formulario: grupos, iconos y rollouts",
+       "resumen": "Añaden al formulario los controles de posición, color e intensidad de luz, agrupados con rollouts para el operador."
+      },
+      {
+       "t": 6548,
+       "titulo": "Sombras, reflejos y versiones de proyecto en Unreal",
+       "resumen": "Ajustan el cubo de luz para lograr sombras sin cortes, exploran los reflejos de Unreal y explican las versiones de proyecto."
+      }
+     ]
+    },
+    {
+     "n": 2,
+     "duracion": 1598.4,
+     "fuentes": [
+      {
+       "id": "2026-07-22 10-28-51",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-22 10-28-51.mp4",
+       "duracion": 1566.96,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": true,
+       "youtube": "83AI7A6L57c"
+      },
+      {
+       "id": "Brainstorm_dia5_2",
+       "etiqueta": "Cámara",
+       "url": "comprimidos/Brainstorm_dia5_2.mp4",
+       "duracion": 1598.4,
+       "desfase": -19.97,
+       "mudo": true,
+       "principal": false,
+       "youtube": "qxWP-4AdWsc"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Alinear el mundo de Unreal con el tracking (offset)",
+       "resumen": "Mueven y rotan el mundo de Unreal con el tracking offset para que coincida con el punto cero real, en el proyecto del museo."
+      },
+      {
+       "t": 153,
+       "titulo": "Overlay tradicional en VR: chroma key y 3D Mate",
+       "resumen": "Configuran el chroma key y ajustan el 3D Mate (rotación, bordes, blend) para recortar el chroma en el overlay tradicional."
+      }
+     ]
+    },
+    {
+     "n": 3,
+     "duracion": 1366.08,
+     "fuentes": [
+      {
+       "id": "2026-07-22 11-30-56",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-22 11-30-56.mp4",
+       "duracion": 1354.04,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": true,
+       "youtube": "zMOV636zHOk"
+      },
+      {
+       "id": "Brainstorm_dia5_3",
+       "etiqueta": "Cámara",
+       "url": "comprimidos/Brainstorm_dia5_3.mp4",
+       "duracion": 1366.08,
+       "desfase": -2.86,
+       "mudo": true,
+       "principal": false,
+       "youtube": "Uu2cT33XErI"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Salida de vídeo por NDI para monitorizar en red",
+       "resumen": "Configuran una salida NDI del programa para verla en un móvil u otro dispositivo de la misma red Wi-Fi."
+      },
+      {
+       "t": 634,
+       "titulo": "Recibir por red la cámara de un móvil como input NDI",
+       "resumen": "Crean un input de tipo Network para mostrar en un objeto la señal emitida en directo por la cámara de un móvil."
+      }
+     ]
+    },
+    {
+     "n": 4,
+     "duracion": 10935.28,
+     "fuentes": [
+      {
+       "id": "2026-07-22 11-54-44",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-22 11-54-44.mp4",
+       "duracion": 10935.28,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": true,
+       "youtube": "zlvCywESI1w"
+      },
+      {
+       "id": "Brainstorm_dia5_4",
+       "etiqueta": "Cámara",
+       "url": "comprimidos/Brainstorm_dia5_4.mp4",
+       "duracion": 8712.96,
+       "desfase": -9.3,
+       "mudo": true,
+       "principal": false,
+       "youtube": "YKaAf5UecUI"
+      },
+      {
+       "id": "Brainstorm_dia5_5",
+       "etiqueta": "Cámara",
+       "url": "comprimidos/Brainstorm_dia5_5.mp4",
+       "duracion": 748.33,
+       "desfase": 10158.32,
+       "mudo": true,
+       "principal": false,
+       "youtube": "2mUtJBt8rW4"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Control DMX desde Infinity y cartas de calibración",
+       "resumen": "Comentan que Infinity puede controlar DMX de luces del estudio y buscan las cartas para calibrar las cámaras."
+      },
+      {
+       "t": 351,
+       "titulo": "VR compuesto en Unreal: compositor, reveals y reflejos",
+       "resumen": "Activan el compositor de Unreal para el VR, con sombras y reflejos reales, y logran que el actor pase detrás de una columna."
+      },
+      {
+       "t": 1489,
+       "titulo": "Luz de emergencia, bloom y overlay vs. Unreal",
+       "resumen": "Simulan una luz roja de emergencia con bloom sobre el actor y recapitulan las diferencias entre overlay y composición en Unreal."
+      },
+      {
+       "t": 2148,
+       "titulo": "Filtro de tracking en Antilatency y nueva escena VR",
+       "resumen": "Buscan el filtro de posición del tracking en Antilatency Service y crean un proyecto VR con un concesionario de coches."
+      },
+      {
+       "t": 3277,
+       "titulo": "Offset, 3D Mate e Input Surface: bug del tracking",
+       "resumen": "Configuran el offset, el 3D Mate y el Input Surface para la nueva escena, resolviendo un bug reiniciando Infinity."
+      },
+      {
+       "t": 5072,
+       "titulo": "Luz de relleno con control USTL y repaso general",
+       "resumen": "Añaden un point light con control de brillo por USTL y repasan lo visto hasta ahora: chroma key, 3D Mate, USTL y XR."
+      },
+      {
+       "t": 6175,
+       "titulo": "Cambio y calibración de un nuevo objetivo: FOV y foco",
+       "resumen": "Calibran un nuevo objetivo Canon Prime 24: field of view, curva de foco por marcas y reseteo del encoder."
+      },
+      {
+       "t": 7760,
+       "titulo": "Probar el objetivo en el XR con Lens Profile Loader",
+       "resumen": "Aplican el objetivo calibrado al proyecto XR y muestran el script Lens Profile Loader para cambiarlo en directo."
+      },
+      {
+       "t": 8256,
+       "titulo": "Post-Process Volume: color, LUTs, grano y bloom",
+       "resumen": "Explican los parámetros de corrección de color del post-process, cómo importar LUTs propias y efectos como grano y bloom."
+      },
+      {
+       "t": 9534,
+       "titulo": "Exponer parámetros del post-process en el Level Blueprint",
+       "resumen": "Crean Custom Events en el Level Blueprint para controlar exposición, saturación y contraste desde Infinity."
+      },
+      {
+       "t": 9845,
+       "titulo": "Aplicar controles en el XR y añadir el control del sol",
+       "resumen": "Depuran un conflicto entre varios Custom Events y añaden el control de la luz direccional para simular amanecer y atardecer."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dia06",
+   "etiqueta": "Día 06",
+   "titulo": "Sesión del 23 de julio",
+   "carpeta": "Día 06",
+   "sesiones": [
+    {
+     "n": 1,
+     "duracion": 9454.4,
+     "fuentes": [
+      {
+       "id": "2026-07-23 08-33-43",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-23 08-33-43.mp4",
+       "duracion": 9454.4,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": true,
+       "youtube": "JMVLs3WBxjE"
+      },
+      {
+       "id": "Brainstorm_dia6_1",
+       "etiqueta": "Cámara",
+       "url": "comprimidos/Brainstorm_dia6_1.mp4",
+       "duracion": 6772.8,
+       "desfase": 8.6,
+       "mudo": true,
+       "principal": false,
+       "youtube": "-Lht7nbb0zo"
+      },
+      {
+       "id": "Brainstorm_dia6_2",
+       "etiqueta": "Cámara",
+       "url": "comprimidos/Brainstorm_dia6_2.mp4",
+       "duracion": 1911.36,
+       "desfase": 6840.6,
+       "mudo": true,
+       "principal": false,
+       "youtube": "Jzohm8DXRlQ"
+      },
+      {
+       "id": "Brainstorm_dia6_3",
+       "etiqueta": "Cámara",
+       "url": "comprimidos/Brainstorm_dia6_3.mp4",
+       "duracion": 513.6,
+       "desfase": 8930.53,
+       "mudo": true,
+       "principal": false,
+       "youtube": "wZLfjnoTGQc"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Montaje y calibración física del rig de cámara",
+       "resumen": "Se monta la cámara en la zapata, se ajustan los encoders de foco y zoom con llaves Allen y se corrige su alineación."
+      },
+      {
+       "t": 1365,
+       "titulo": "Normalización de encoders y curva de foco",
+       "resumen": "Se resetea a cero el encoder Tilta/Antilente y se comprueba el foco contra objetos de InfinitySet a 0,5, 1, 2 y 4 metros."
+      },
+      {
+       "t": 2011,
+       "titulo": "Comprobación del foco con un actor y offset de rotación",
+       "resumen": "Se verifica que el foco coincide con un actor a distancias reales y se ajusta el offset de rotación del mundo en Unreal."
+      },
+      {
+       "t": 2275,
+       "titulo": "Calibración del bokeh con el aperture multiplicador",
+       "resumen": "Se explica el slider de aperture en Camera Setup como multiplicador de desenfoque y se iguala el bokeh real con el virtual."
+      },
+      {
+       "t": 2886,
+       "titulo": "Corrección del bug de Post Process Volume (vectores RGB)",
+       "resumen": "Se arregla el envío roto de exposición, contraste y saturación creando un Custom Event y un Make Vector4 en el Level Blueprint."
+      },
+      {
+       "t": 3465,
+       "titulo": "Composición del suelo con IA: segmentación de chroma",
+       "resumen": "Se explica cómo componer el suelo pisado por el actor segmentando el chroma con IA, perdiendo las sombras del set extension."
+      },
+      {
+       "t": 3627,
+       "titulo": "Offset del mundo Unreal respecto al cero de Infinity",
+       "resumen": "Se copian posición y rotación y se explica el concepto de offset para hacer coincidir el cero de Unreal con el de Infinity."
+      },
+      {
+       "t": 3778,
+       "titulo": "Configuración de Crosspoint 1 y 2 para proyección XR",
+       "resumen": "Se crea el Crosspoint 1 (Track Free, sin distorsión ni lens center) y el Crosspoint 2 (Track XR) con la geometría del video wall."
+      },
+      {
+       "t": 4199,
+       "titulo": "Ruteo del Display Out y salida al video wall",
+       "resumen": "Se asigna el Display Out del Crosspoint 2 a un pipe y se corrige un defocus residual que desenfocaba la geometría proyectada."
+      },
+      {
+       "t": 4446,
+       "titulo": "Crosspoint 6 tipo AR: cámara más set extension",
+       "resumen": "Se configura el Crosspoint 6 como AR combinando el tracking 2 con la entrada de cámara y se rutea el Display Out final."
+      },
+      {
+       "t": 4692,
+       "titulo": "Set extension y holdout vinculado al offset de Unreal",
+       "resumen": "Se asigna la geometría de set extension, se activa el holdout y se vincula su posición/rotación al offset con copy/paste bind."
+      },
+      {
+       "t": 5160,
+       "titulo": "Extra render y creación del plano BrainstormTransfer",
+       "resumen": "Se sube el extra render para evitar huecos negros y se crea en Unreal un plano con material de transfer para medir el delay."
+      },
+      {
+       "t": 6243,
+       "titulo": "Ajuste fino de los delays hasta sincronizar la imagen",
+       "resumen": "Se ajustan el video delay del input y el delay del set extension hasta que ambas mitades del plano cambien a la vez (12 frames)."
+      },
+      {
+       "t": 6710,
+       "titulo": "Migración de la escena a un proyecto Unreal limpio",
+       "resumen": "Al fallar el alfa del holdout se migra la escena a un proyecto Unreal nuevo con settings por defecto para aislar el problema."
+      },
+      {
+       "t": 7178,
+       "titulo": "Revisión de la zapata y del juego mecánico del soporte",
+       "resumen": "Se desmonta el soporte para comprobar si tiene holgura mecánica que pueda estar afectando a la precisión del tracking."
+      },
+      {
+       "t": 7878,
+       "titulo": "Ajuste de offsets, FOV y marcado del punto cero real",
+       "resumen": "Se recalculan offsets de posición, altura y FOV con la lente Canon Prime 24 y se marca en el suelo el verdadero punto cero."
+      },
+      {
+       "t": 8699,
+       "titulo": "Reajuste final de offsets y comparación con la caja",
+       "resumen": "Con el nuevo cero se reajustan pan, tilt y offsets de altura, mejorando notablemente la precisión antes de ir a almorzar."
+      }
+     ]
+    },
+    {
+     "n": 2,
+     "duracion": 11648.17,
+     "fuentes": [
+      {
+       "id": "2026-07-23 11-44-23",
+       "etiqueta": "Pantalla",
+       "url": "comprimidos/2026-07-23 11-44-23.mp4",
+       "duracion": 11561.68,
+       "desfase": 0.0,
+       "mudo": false,
+       "principal": true,
+       "youtube": "DCNjEQcV8i8"
+      },
+      {
+       "id": "Brainstorm_dia6_4",
+       "etiqueta": "Cámara",
+       "url": "comprimidos/Brainstorm_dia6_4.mp4",
+       "duracion": 11648.17,
+       "desfase": -42.72,
+       "mudo": true,
+       "principal": false,
+       "youtube": "1LaUrsEOX1Y"
+      }
+     ],
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "Recalibración de ejes del tracker con láser",
+       "resumen": "Ajustan con láser la posición del tracker InfinitySet, corrigiendo una desviación de varios centímetros en los ejes."
+      },
+      {
+       "t": 321,
+       "titulo": "Preset AR Canon 24mm y trazado del eje X=0 con láser",
+       "resumen": "Guardan el preset de cámara AR Canon Prime 24 y marcan con láser y cinta la línea del eje X=0 y una escuadra de 90 grados."
+      },
+      {
+       "t": 867,
+       "titulo": "Escaneo 3D de la geometría corregida (Scaniverse)",
+       "resumen": "Escanean con el iPhone y Scaniverse la geometría física ya corregida y exportan el modelo en OBJ para enviarlo por email."
+      },
+      {
+       "t": 1276,
+       "titulo": "Importación en Maya y alineación al punto cero",
+       "resumen": "Cargan en Maya el escaneo nuevo junto a la geometría antigua y la desplazan y centran sobre el eje de coordenadas."
+      },
+      {
+       "t": 1694,
+       "titulo": "Freeze transformations y modelado del set extension",
+       "resumen": "Congelan transformaciones, rotan 90 grados por convención de Brainstorm y extruyen la geometría para crear el set extension."
+      },
+      {
+       "t": 1964,
+       "titulo": "Corte del suelo y coordenadas UV de gradiente",
+       "resumen": "Recortan y aplanan el suelo y generan coordenadas de textura automáticas para aplicar el mismo gradiente que el video wall."
+      },
+      {
+       "t": 2656,
+       "titulo": "Reimportación de geometría y edición del holdout blueprint",
+       "resumen": "Copian los nuevos meshes de suelo y pared del video wall, editan el blueprint holdout y renombran el blueprint en Unreal."
+      },
+      {
+       "t": 2980,
+       "titulo": "Prueba en escena XR ruinas: deriva del tracking",
+       "resumen": "Instalan el camera setup, cargan la escena de las ruinas y comprueban que el eje del tracking sigue derivando pese a los offsets."
+      },
+      {
+       "t": 3668,
+       "titulo": "Video wall desactualizado y desajuste de FOV/escala",
+       "resumen": "Descubren que el input 2 seguía usando la geometría vieja y sospechan además un desajuste de field of view/escala en el AR."
+      },
+      {
+       "t": 4340,
+       "titulo": "Pruebas de calibración con un segundo objeto de referencia",
+       "resumen": "Añaden una segunda caja de referencia y comparan el AR con el clon para intentar aislar el origen del desplazamiento del eje."
+      },
+      {
+       "t": 5151,
+       "titulo": "Reexportación de geometría V2 y ajuste del gradiente",
+       "resumen": "Exportan una nueva versión de la geometría, corrigen la proporción del gradiente del suelo y la reimportan en Unreal."
+      },
+      {
+       "t": 5958,
+       "titulo": "Simulación en Crosspoint 7: geometría vs tracking",
+       "resumen": "Crean una simulación filtrada por crosspoint ID que demuestra que la geometría encaja perfecta y que el fallo está en el tracking."
+      },
+      {
+       "t": 6302,
+       "titulo": "Organización del form en rollouts: geometría, delays, color",
+       "resumen": "Ordenan el form de Infinity agrupando en rollouts la geometría, los delays de tracking y la corrección de color/exposición."
+      },
+      {
+       "t": 6799,
+       "titulo": "Título de texto en Crosspoint 8 con fuentes 2D",
+       "resumen": "Crean un texto en el Crosspoint 8 con fuente texturizada de alta resolución, caja de texto con crop y shrink, y fondo con plano."
+      },
+      {
+       "t": 7513,
+       "titulo": "Mezcla en Crosspoint 12 y animaciones de entrada/salida",
+       "resumen": "Componen el programa final apilando capas en el Crosspoint 12 y crean timelines personalizados de entrada y salida del título."
+      },
+      {
+       "t": 8001,
+       "titulo": "Logo de Sketchfab: importación, timer y giro animado",
+       "resumen": "Descargan un logo de Sketchfab, lo importan como FBX y lo hacen girar continuamente mediante un timer vinculado por bind."
+      },
+      {
+       "t": 9246,
+       "titulo": "Infinity vs Aston y ajuste del tracking delay en el museo",
+       "resumen": "Explican que Aston gestiona composiciones gráficas más complejas que Infinity y afinan el tracking delay en la escena del museo."
+      },
+      {
+       "t": 9748,
+       "titulo": "Ampliación del suelo transitable y extra render",
+       "resumen": "Alargan el suelo hacia delante para dar más espacio de movimiento y suben el extra render para evitar bandas negras al moverse."
+      },
+      {
+       "t": 10078,
+       "titulo": "Columna adicional y orden de transparencias (DOF)",
+       "resumen": "Escanean una columna para disimular costuras y corrigen el orden de renderizado before/after DOF en materiales con transparencia (agua)."
+      },
+      {
+       "t": 10875,
+       "titulo": "Migración final del museo a la geometría V3 corregida",
+       "resumen": "Duplican el proyecto del museo, importan la geometría V3 en Unreal, actualizan el holdout y alinean la altura del suelo."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

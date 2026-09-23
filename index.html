@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Producción Virtual Brainstorm</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header>
+  <h1 id="titulo-curso">Curso</h1>
+  <nav id="dias"></nav>
+  <label class="origen">
+    <span class="etiqueta-control">Vídeo</span>
+    <select id="origen" title="De dónde se cargan los vídeos">
+      <option value="local">Local</option>
+      <option value="youtube">YouTube</option>
+    </select>
+  </label>
+</header>
+
+<main>
+  <aside id="panel">
+    <input id="buscar" type="search" placeholder="Buscar un tema…" autocomplete="off">
+    <div id="indice"></div>
+  </aside>
+
+  <section id="escenario">
+    <div id="videos"></div>
+    <div id="controles">
+      <button id="reproducir" title="Reproducir o pausar (espacio)">▶</button>
+      <button id="atras" title="Atrás 10 s (←)">« 10s</button>
+      <button id="adelante" title="Adelante 10 s (→)">10s »</button>
+      <input id="barra" type="range" min="0" max="100" step="0.5" value="0">
+      <span id="tiempo">--:-- / --:--</span>
+      <label class="etiqueta-control" for="velocidad">Velocidad</label>
+      <select id="velocidad">
+        <option value="0.75">0,75×</option>
+        <option value="1" selected>1×</option>
+        <option value="1.25">1,25×</option>
+        <option value="1.5">1,5×</option>
+        <option value="2">2×</option>
+      </select>
+      <div id="audio"></div>
+      <span id="nombre-sesion"></span>
+    </div>
+    <p class="ayuda">
+      Espacio: reproducir o pausar · ← →: 10 s · J L: 30 s · Tab: cambiar la imagen grande · F: pantalla completa
+    </p>
+  </section>
+</main>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

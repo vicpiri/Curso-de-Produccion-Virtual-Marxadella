@@ -1,0 +1,5 @@
+# Las grabaciones viven en YouTube; aquí ocupan gigas y no se suben.
+videos/
+servidor.log
+__pycache__/
+*.pyc
