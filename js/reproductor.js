@@ -74,6 +74,9 @@ export class ReproductorYouTube {
     this.listo = false;
     this.estado = -1;
     this.yt = null;
+    // Aviso opcional con la calidad que YouTube está sirviendo ('hd1080', 'large'…).
+    // No se puede fijar desde fuera, pero sí saberla: sirve para diagnosticar.
+    this.alCambiarCalidad = null;
   }
 
   async preparar(idVideo) {
@@ -95,7 +98,12 @@ export class ReproductorYouTube {
           origin: location.origin,
         },
         events: {
-          onReady: () => { this.listo = true; resolve(); },
+          onReady: () => {
+            this.listo = true;
+            this.alCambiarCalidad?.(this.calidad);
+            resolve();
+          },
+          onPlaybackQualityChange: (e) => this.alCambiarCalidad?.(e.data),
           onStateChange: (e) => {
             this.estado = e.data;
             // seekTo sobre un vídeo sin empezar lo pone en marcha: se deshace aquí.
@@ -136,6 +144,7 @@ export class ReproductorYouTube {
 
   get tiempo() { return this.yt?.getCurrentTime?.() ?? 0; }
   get duracion() { return this.yt?.getDuration?.() ?? 0; }
+  get calidad() { return this.yt?.getPlaybackQuality?.() ?? 'unknown'; }
   // Mientras carga cuenta como "en marcha": si no, se le pediría play una y otra vez.
   get pausado() { return this.estado !== YT_REPRODUCIENDO && this.estado !== YT_CARGANDO; }
   get esperando() { return this.estado === YT_CARGANDO; }

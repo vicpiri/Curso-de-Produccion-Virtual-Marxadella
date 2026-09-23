@@ -254,6 +254,21 @@ main { flex: 1; display: flex; min-height: 0; }
 
 #videos.una-sola .caja-video .etiqueta { display: none; }
 
+/* Resolución que sirve YouTube, discreta, arriba a la derecha. Solo informa.
+   Sin controles nativos no hay «Estadísticas para nerds»; esto los sustituye. */
+.calidad {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  padding: 1px 6px;
+  border-radius: 20px;
+  background: #0006;
+  color: #fffa;
+  font-size: 10px;
+  pointer-events: none;
+}
+.calidad:empty { display: none; }
+
 /* ---- controles ---- */
 
 #controles {

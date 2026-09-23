@@ -141,9 +141,12 @@ async function abrirSesion(dia, sesion, tInicial = 0) {
       const capa = crear('div', 'capa');
       const etiqueta = crear('button', 'etiqueta', datos.etiqueta);
       etiqueta.title = 'Intercambiar con la imagen grande';
-      caja.append(hueco, capa, etiqueta);
+      // Resolución que YouTube está sirviendo; vacío (oculto) con vídeo local.
+      const calidad = crear('span', 'calidad');
+      calidad.title = 'Resolución que está sirviendo YouTube';
+      caja.append(hueco, capa, etiqueta, calidad);
       escenario.append(caja);
-      pista = { etiqueta: datos.etiqueta, caja, fuentes: [] };
+      pista = { etiqueta: datos.etiqueta, caja, calidad, fuentes: [] };
       // En la miniatura, intercambia; en la imagen grande, reproduce o pausa.
       caja.onclick = () => {
         if (pista !== estado.ampliada) ampliar(pista, true);
@@ -157,6 +160,7 @@ async function abrirSesion(dia, sesion, tInicial = 0) {
     if (deYouTube) {
       elemento = crear('div', 'segmento yt');
       rep = new ReproductorYouTube(elemento);
+      rep.alCambiarCalidad = (q) => { pista.calidad.textContent = nombreCalidad(q); };
     } else {
       elemento = crear('video', 'segmento');
       elemento.playsInline = true;
@@ -193,6 +197,15 @@ async function abrirSesion(dia, sesion, tInicial = 0) {
   estado.grupo.irA(tInicial);
   dibujarBotonesAudio();
   refrescarControles();
+}
+
+/* Nombres que da la IFrame API de YouTube para cada escalón de calidad. */
+const CALIDADES = {
+  tiny: '144p', small: '240p', medium: '360p', large: '480p',
+  hd720: '720p', hd1080: '1080p', hd1440: '1440p', hd2160: '2160p', highres: '4K+',
+};
+function nombreCalidad(q) {
+  return CALIDADES[q] ?? '';     // 'auto', 'unknown' o vacío: no se muestra nada
 }
 
 function ampliar(pista, elegidaPorElUsuario = false) {
